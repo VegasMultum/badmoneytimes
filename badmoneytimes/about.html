@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Bad Money Times</title>
+  <meta name="description" content="About Bad Money Times: our mission, methodology, sourcing standards, and disclosures." />
+
+  <!-- Tailwind CDN (fine for Phase 1) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .logo-img { width: 56px; height: auto; }
+  </style>
+
+  <!-- MailerLite Universal -->
+  <script>
+    (function (w, d, e, u, f, l, n) {
+      w[f] = w[f] || function () { (w[f].q = w[f].q || []).push(arguments); };
+      l = d.createElement(e); l.async = 1; l.src = u;
+      n = d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l, n);
+    })(window, document, "script", "https://assets.mailerlite.com/js/universal.js", "ml");
+    ml("account", "1927109");
+  </script>
+</head>
+
+<body class="bg-black text-white antialiased">
+  <a id="top"></a>
+
+  <!-- ===== HEADER (matches updated site) ===== -->
+  <header class="fixed w-full z-50 bg-black/95 backdrop-blur-sm border-b border-red-900/30">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/badmoneytimes-1.jpg" alt="Bad Money Times logo" class="logo-img rounded-md object-contain" />
+        <div>
+          <div class="text-lg font-bold">Bad Money Times</div>
+          <div class="text-xs text-gray-400">Financial true crime • authority abuse</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="episodes.html" class="hover:text-red-500 transition">Episodes</a>
+        <a href="articles.html" class="hover:text-red-500 transition">Articles</a>
+        <a href="about.html" class="text-red-400 font-semibold">About</a>
+        <a href="archive.html" class="hover:text-red-500 transition">Archive</a>
+        <a href="resources.html" class="hover:text-red-500 transition">Resources</a>
+        <a href="index.html#newsletter" class="bg-red-600 hover:bg-red-700 px-3 py-2 rounded text-sm font-semibold transition">Subscribe</a>
+      </nav>
+
+      <!-- Mobile menu toggle -->
+      <div class="md:hidden">
+        <button id="mobileToggle" aria-expanded="false" aria-controls="mobileNav" class="p-2 rounded hover:bg-white/5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-white">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="md:hidden hidden px-4 pb-4 border-t border-red-900/10">
+      <a href="episodes.html" class="block py-2">Episodes</a>
+      <a href="articles.html" class="block py-2">Articles</a>
+      <a href="about.html" class="block py-2 text-red-400 font-semibold">About</a>
+      <a href="archive.html" class="block py-2">Archive</a>
+      <a href="resources.html" class="block py-2">Resources</a>
+      <a href="index.html#newsletter" class="block py-2">Subscribe</a>
+    </div>
+  </header>
+
+  <main class="pt-28 pb-16">
+
+    <!-- ===== HERO ===== -->
+    <section class="px-4 py-10">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="inline-flex items-center gap-2 bg-red-600/20 border border-red-600/40 px-3 py-1 rounded-full text-xs font-bold">
+            ABOUT
+          </span>
+          <span class="text-xs text-gray-400">Mission • standards • disclosures</span>
+        </div>
+
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4">About Bad Money Times</h1>
+
+        <p class="text-gray-300 text-lg leading-relaxed max-w-3xl">
+          Bad Money Times is a financial true-crime Shorts channel focused on one pattern:
+          authority figures and trusted insiders taking money meant for other people — often the vulnerable.
+        </p>
+
+        <div class="mt-6 grid md:grid-cols-3 gap-4">
+          <div class="bg-black/50 border border-red-900/20 rounded-lg p-4">
+            <div class="text-sm font-bold mb-1">What this is</div>
+            <p class="text-sm text-gray-400">Short, structured case explainers built for fast understanding.</p>
+          </div>
+          <div class="bg-black/50 border border-red-900/20 rounded-lg p-4">
+            <div class="text-sm font-bold mb-1">What this isn’t</div>
+            <p class="text-sm text-gray-400">Not legal advice. Not financial advice. Not a call to harass anyone.</p>
+          </div>
+          <div class="bg-black/50 border border-red-900/20 rounded-lg p-4">
+            <div class="text-sm font-bold mb-1">What we optimize for</div>
+            <p class="text-sm text-gray-400">Accuracy, clarity, and clean sourcing over hype.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MISSION ===== -->
+    <section class="px-4 py-10 border-t border-red-900/10">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-end justify-between gap-4 mb-6">
+          <h2 class="text-2xl font-bold">Mission</h2>
+          <a href="#top" class="text-sm text-gray-500 hover:text-gray-300">Back to top ↑</a>
+        </div>
+
+        <div class="bg-black/50 border border-red-900/15 rounded-xl p-6 md:p-8">
+          <p class="text-gray-300 leading-relaxed">
+            The mission is simple: make fraud mechanics understandable, fast.
+            A lot of scams aren’t “clever.” They’re repetitive. They succeed because people trust the wrong signals:
+            a title, a uniform, a platform, a church, an office, a badge, a credential, a brand.
+          </p>
+
+          <div class="mt-6 grid md:grid-cols-2 gap-6">
+            <div class="bg-black/60 border border-red-900/10 rounded-lg p-5">
+              <h3 class="font-bold mb-2">Core theme</h3>
+              <p class="text-sm text-gray-400">
+                Authority + trust + money + betrayal.
+              </p>
+            </div>
+            <div class="bg-black/60 border border-red-900/10 rounded-lg p-5">
+              <h3 class="font-bold mb-2">Core promise</h3>
+              <p class="text-sm text-gray-400">
+                We keep the tone neutral and the facts checkable.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="episodes.html" class="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg font-semibold transition">
+              Watch the Latest Episode
+            </a>
+            <a href="archive.html" class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 px-6 py-3 rounded-lg font-semibold transition">
+              Browse the Archive
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== METHODOLOGY ===== -->
+    <section class="px-4 py-10 border-t border-red-900/10">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-end justify-between gap-4 mb-6">
+          <h2 class="text-2xl font-bold">Methodology</h2>
+          <a href="#top" class="text-sm text-gray-500 hover:text-gray-300">Back to top ↑</a>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-black/50 border border-red-900/15 rounded-xl p-6">
+            <div class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded inline-block mb-3">1) Pick the case</div>
+            <h3 class="text-lg font-extrabold mb-2">High signal, clear harm</h3>
+            <p class="text-sm text-gray-400">
+              We prefer cases with identifiable victims, a defined mechanism, and an official paper trail.
+            </p>
+          </div>
+
+          <div class="bg-black/50 border border-red-900/15 rounded-xl p-6">
+            <div class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded inline-block mb-3">2) Verify the spine</div>
+            <h3 class="text-lg font-extrabold mb-2">Facts first</h3>
+            <p class="text-sm text-gray-400">
+              Name, role, jurisdiction, time period, alleged conduct, and outcome must match reliable sources.
+            </p>
+          </div>
+
+          <div class="bg-black/50 border border-red-900/15 rounded-xl p-6">
+            <div class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded inline-block mb-3">3) Explain the mechanism</div>
+            <h3 class="text-lg font-extrabold mb-2">How the theft worked</h3>
+            <p class="text-sm text-gray-400">
+              We focus on the action chain: trust setup → extraction → benefit → consequences.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-6 bg-black/50 border border-red-900/15 rounded-xl p-6 md:p-8">
+          <h3 class="text-xl font-extrabold mb-3">Sourcing standard (what “verified” means here)</h3>
+          <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
+            <li><span class="text-gray-200 font-semibold">Primary sources preferred:</span> court filings, charging documents, plea agreements, sentencing memos, agency press releases.</li>
+            <li><span class="text-gray-200 font-semibold">Secondary sources used for context:</span> reputable reporting that cites primary documents.</li>
+            <li><span class="text-gray-200 font-semibold">If something is alleged:</span> it’s labeled as alleged, and we anchor it to the source (e.g., “according to prosecutors” / “according to court records”).</li>
+            <li><span class="text-gray-200 font-semibold">If we can’t confirm:</span> we either omit it or label it as unconfirmed.</li>
+          </ul>
+
+          <div class="mt-6 bg-black/60 border border-red-900/10 rounded-lg p-5">
+            <h4 class="font-bold mb-2">Corrections</h4>
+            <p class="text-sm text-gray-400">
+              If you spot an error, the right move is simple: point to the source and we’ll correct the record.
+              (Contact method will be added here if/when you want it.)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DISCLOSURES ===== -->
+    <section class="px-4 py-10 border-t border-red-900/10">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-end justify-between gap-4 mb-6">
+          <h2 class="text-2xl font-bold">Disclosures</h2>
+          <a href="#top" class="text-sm text-gray-500 hover:text-gray-300">Back to top ↑</a>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-black/50 border border-red-900/15 rounded-xl p-6">
+            <h3 class="text-lg font-extrabold mb-2">No advice</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Content is for information and commentary. Nothing on this site should be taken as legal, financial,
+              or medical advice. If you need help, contact a qualified professional in your jurisdiction.
+            </p>
+          </div>
+
+          <div class="bg-black/50 border border-red-900/15 rounded-xl p-6">
+            <h3 class="text-lg font-extrabold mb-2">Affiliate links</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Some pages may include affiliate links. If you choose to buy through them, Bad Money Times may earn a commission
+              at no extra cost to you. The goal is convenience, not pressure.
+            </p>
+          </div>
+
+          <div class="bg-black/50 border border-red-900/15 rounded-xl p-6">
+            <h3 class="text-lg font-extrabold mb-2">Harassment policy</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Do not harass, threaten, or contact people featured in stories. The point is understanding the mechanism and harm,
+              not targeting individuals.
+            </p>
+          </div>
+
+          <div class="bg-black/50 border border-red-900/15 rounded-xl p-6">
+            <h3 class="text-lg font-extrabold mb-2">Updates over time</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Legal cases can evolve (appeals, resentencing, dismissals). When newer official information becomes available,
+              pages may be updated.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="px-4 py-12 border-t border-red-900/10">
+      <div class="max-w-5xl mx-auto bg-gradient-to-br from-red-900/20 to-black border border-red-900/20 rounded-xl p-7 md:p-10">
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-3">If you’re new here</h2>
+        <p class="text-gray-300 mb-6 max-w-3xl">
+          Start with the latest episode, then use the archive to binge by theme.
+          If you want general tools for prevention and reporting, go to Resources.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="episodes.html" class="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg font-semibold transition">
+            Watch Latest
+          </a>
+          <a href="archive.html" class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 px-6 py-3 rounded-lg font-semibold transition">
+            Browse Archive
+          </a>
+          <a href="resources.html" class="inline-flex items-center justify-center border border-red-600/40 hover:border-red-600/80 px-6 py-3 rounded-lg font-semibold transition">
+            Resources
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="px-4 py-10">
+      <div class="max-w-5xl mx-auto border-t border-red-900/10 pt-6 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+        <div class="text-sm text-gray-400">
+          © <span id="year"></span> Bad Money Times. All rights reserved.
+        </div>
+        <div class="flex gap-4 text-sm">
+          <a class="hover:text-red-500" href="privacy.html">Privacy</a>
+          <a class="hover:text-red-500" href="terms.html">Terms</a>
+          <a class="hover:text-red-500" href="index.html#newsletter">Newsletter</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    // footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // mobile nav toggle
+    (function () {
+      const btn = document.getElementById("mobileToggle");
+      const nav = document.getElementById("mobileNav");
+      if (!btn || !nav) return;
+
+      btn.addEventListener("click", () => {
+        const isHidden = nav.classList.contains("hidden");
+        nav.classList.toggle("hidden", !isHidden);
+        btn.setAttribute("aria-expanded", String(isHidden));
+      });
+    })();
+  </script>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Latest Episode — Bad Money Times</title>
+  <meta name="description" content="Watch the latest Bad Money Times episode — financial true crime and authority abuse." />
+
+  <!-- Tailwind CDN (fine for Phase 1) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .logo-img { width: 56px; height: auto; }
+    /* A 9:16 responsive frame */
+    .shorts-frame {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 9 / 16;
+      margin: 0 auto;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(0,0,0,0.35);
+    }
+    .shorts-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+
+  <!-- MailerLite Universal -->
+  <script>
+    (function (w, d, e, u, f, l, n) {
+      w[f] = w[f] || function () { (w[f].q = w[f].q || []).push(arguments); };
+      l = d.createElement(e); l.async = 1; l.src = u;
+      n = d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l, n);
+    })(window, document, "script", "https://assets.mailerlite.com/js/universal.js", "ml");
+    ml("account", "1927109");
+  </script>
+</head>
+
+<body class="bg-black text-white antialiased">
+
+  <!-- ===== HEADER (matches updated site) ===== -->
+  <header class="fixed w-full z-50 bg-black/95 backdrop-blur-sm border-b border-red-900/30">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/badmoneytimes-1.jpg" alt="Bad Money Times logo" class="logo-img rounded-md object-contain" />
+        <div>
+          <div class="text-lg font-bold">Bad Money Times</div>
+          <div class="text-xs text-gray-400">Financial true crime • authority abuse</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="episodes.html" class="text-red-400 font-semibold">Episodes</a>
+        <a href="articles.html" class="hover:text-red-500 transition">Articles</a>
+        <a href="about.html" class="hover:text-red-500 transition">About</a>
+        <a href="archive.html" class="hover:text-red-500 transition">Archive</a>
+        <a href="resources.html" class="hover:text-red-500 transition">Resources</a>
+        <a href="index.html#newsletter" class="bg-red-600 hover:bg-red-700 px-3 py-2 rounded text-sm font-semibold transition">Subscribe</a>
+      </nav>
+
+      <!-- Mobile menu toggle -->
+      <div class="md:hidden">
+        <button id="mobileToggle" aria-expanded="false" aria-controls="mobileNav" class="p-2 rounded hover:bg-white/5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-white">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="md:hidden hidden px-4 pb-4 border-t border-red-900/10">
+      <a href="episodes.html" class="block py-2 text-red-400 font-semibold">Episodes</a>
+      <a href="articles.html" class="block py-2">Articles</a>
+      <a href="about.html" class="block py-2">About</a>
+      <a href="archive.html" class="block py-2">Archive</a>
+      <a href="resources.html" class="block py-2">Resources</a>
+      <a href="index.html#newsletter" class="block py-2">Subscribe</a>
+    </div>
+  </header>
+
+  <main class="pt-28 pb-16">
+
+    <!-- ===== HERO ===== -->
+    <section class="px-4 py-10">
+      <div class="max-w-5xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 bg-red-600/20 border border-red-600/40 px-4 py-2 rounded-full mb-5">
+          <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+          <span class="text-sm font-semibold">LATEST EPISODE</span>
+        </div>
+
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4">Watch the Latest Short</h1>
+        <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+          New case drops regularly. If you came from a Short, this is the fastest way to keep watching.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== EMBED ===== -->
+    <section class="px-4">
+      <div class="max-w-5xl mx-auto">
+
+        <!--
+          DAILY CHANGE INSTRUCTIONS:
+          1) Take your latest Short link: https://www.youtube.com/shorts/VIDEO_ID
+          2) Copy VIDEO_ID
+          3) Replace it in BOTH places below:
+             - data-short-id="VIDEO_ID"
+             - iframe src="https://www.youtube.com/embed/VIDEO_ID"
+        -->
+
+        <div class="shorts-frame" data-short-id="sJEYdstU-vk">
+          <iframe
+            src="https://youtube.com/embed/9kl5wGEigVY?si=NdbQYPRpy7xzeEGH"
+            title="Bad Money Times — Latest Episode"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="https://www.youtube.com/channel/UCXeDuuobL5rUnJwW2_x5X_g" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg font-semibold transition">
+            Open YouTube Channel
+          </a>
+
+          <a href="resources.html"
+             class="inline-flex items-center justify-center border border-red-600/40 hover:border-red-600/80 px-6 py-3 rounded-lg font-semibold transition">
+            Resources (Protection & Tools)
+          </a>
+
+          <a href="archive.html"
+             class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 px-6 py-3 rounded-lg font-semibold transition">
+            Full Archive
+          </a>
+        </div>
+
+        <p class="text-xs text-gray-500 mt-6 text-center">
+         
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="px-4 py-10 mt-12">
+      <div class="max-w-5xl mx-auto border-t border-red-900/10 pt-6 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+        <div class="text-sm text-gray-400">
+          © <span id="year"></span> Bad Money Times. All rights reserved. Updated: January 2026.
+        </div>
+        <div class="flex gap-4 text-sm">
+          <a class="hover:text-red-500" href="privacy.html">Privacy</a>
+          <a class="hover:text-red-500" href="terms.html">Terms</a>
+          <a class="hover:text-red-500" href="index.html#newsletter">Newsletter</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    // footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // mobile nav toggle
+    (function () {
+      const btn = document.getElementById("mobileToggle");
+      const nav = document.getElementById("mobileNav");
+      if (!btn || !nav) return;
+
+      btn.addEventListener("click", () => {
+        const isHidden = nav.classList.contains("hidden");
+        nav.classList.toggle("hidden", !isHidden);
+        btn.setAttribute("aria-expanded", String(isHidden));
+      });
+    })();
+  </script>
+
+  <script src="main.js"></script>
+</body>
+</html>

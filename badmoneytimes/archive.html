@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Archive — Bad Money Times</title>
+  <meta name="description" content="Bad Money Times Archive: a searchable index of all Shorts — scams, fraud, and authority abuse cases." />
+
+  <!-- Tailwind CDN (fine for Phase 1) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .logo-img { width: 56px; height: auto; }
+  </style>
+
+  <!-- MailerLite Universal -->
+  <script>
+    (function (w, d, e, u, f, l, n) {
+      w[f] = w[f] || function () { (w[f].q = w[f].q || []).push(arguments); };
+      l = d.createElement(e); l.async = 1; l.src = u;
+      n = d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l, n);
+    })(window, document, "script", "https://assets.mailerlite.com/js/universal.js", "ml");
+    ml("account", "1927109");
+  </script>
+</head>
+
+<body class="bg-black text-white antialiased">
+  <a id="top"></a>
+
+  <!-- ===== HEADER (matches updated site) ===== -->
+  <header class="fixed w-full z-50 bg-black/95 backdrop-blur-sm border-b border-red-900/30">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/badmoneytimes-1.jpg" alt="Bad Money Times logo" class="logo-img rounded-md object-contain" />
+        <div>
+          <div class="text-lg font-bold">Bad Money Times</div>
+          <div class="text-xs text-gray-400">Financial true crime • authority abuse</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="episodes.html" class="hover:text-red-500 transition">Episodes</a>
+        <a href="articles.html" class="hover:text-red-500 transition">Articles</a>
+        <a href="about.html" class="hover:text-red-500 transition">About</a>
+        <a href="archive.html" class="text-red-400 font-semibold">Archive</a>
+        <a href="resources.html" class="hover:text-red-500 transition">Resources</a>
+        <a href="index.html#newsletter" class="bg-red-600 hover:bg-red-700 px-3 py-2 rounded text-sm font-semibold transition">Subscribe</a>
+      </nav>
+
+      <!-- Mobile menu toggle -->
+      <div class="md:hidden">
+        <button id="mobileToggle" aria-expanded="false" aria-controls="mobileNav" class="p-2 rounded hover:bg-white/5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-white">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="md:hidden hidden px-4 pb-4 border-t border-red-900/10">
+      <a href="episodes.html" class="block py-2">Episodes</a>
+      <a href="articles.html" class="block py-2">Articles</a>
+      <a href="about.html" class="block py-2">About</a>
+      <a href="archive.html" class="block py-2 text-red-400 font-semibold">Archive</a>
+      <a href="resources.html" class="block py-2">Resources</a>
+      <a href="index.html#newsletter" class="block py-2">Subscribe</a>
+    </div>
+  </header>
+
+  <main class="pt-28 pb-16">
+
+    <!-- ===== HERO ===== -->
+    <section class="px-4 py-10">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="inline-flex items-center gap-2 bg-red-600/20 border border-red-600/40 px-3 py-1 rounded-full text-xs font-bold">
+            ARCHIVE
+          </span>
+          <span class="text-xs text-gray-400">Search • filter • binge</span>
+        </div>
+
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4">Archive</h1>
+
+        <p class="text-gray-300 text-lg leading-relaxed max-w-3xl">
+          This is the master list of every Bad Money Times Short.
+          Use search + filters to find the exact type of betrayal you want to binge.
+        </p>
+
+
+            <a href="cases.html" class="bg-black/50 border border-red-900/20 rounded-lg p-4 hover:border-red-600/40 transition block">
+            <div class="text-sm font-bold mb-1">Cases</div>
+            <p class="text-sm text-gray-400">All The Latest Story Case Files →</p>
+            <span class="text-sm text-red-400 font-semibold inline-block mt-2">Go to Cases →</span>
+          <a href="resources.html" class="bg-black/50 border border-red-900/20 rounded-lg p-4 hover:border-red-600/40 transition block">
+            <div class="text-sm font-bold mb-1">Resources</div>
+            <p class="text-sm text-gray-400">Protection tools + reporting links tied to these stories.</p>
+            <span class="text-sm text-red-400 font-semibold inline-block mt-2">Go to Resources →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTROLS ===== -->
+    <section class="px-4 py-8 border-t border-red-900/10">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-4">
+          <div class="md:col-span-2">
+            <label for="searchInput" class="text-sm text-gray-400">Search</label>
+            <input id="searchInput" type="text" placeholder="Search title, tags, keywords..."
+              class="mt-1 w-full bg-black/60 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-gray-600 focus:outline-none focus:border-white/40" />
+          </div>
+
+          <div>
+            <label for="categorySelect" class="text-sm text-gray-400">Category</label>
+            <select id="categorySelect"
+              class="mt-1 w-full bg-black/60 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white/40">
+              <option value="all">All</option>
+              <option value="authority">Authority Theft</option>
+              <option value="public">Public Funds / Benefits</option>
+              <option value="ai">AI & Cyber Scams</option>
+              <option value="cons">Scams & Cons</option>
+              <option value="church">Trust Networks</option>
+              <option value="meta">Channel</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="sortSelect" class="text-sm text-gray-400">Sort</label>
+            <select id="sortSelect"
+              class="mt-1 w-full bg-black/60 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white/40">
+              <option value="default">Default</option>
+              <option value="title_asc">Title (A→Z)</option>
+              <option value="title_desc">Title (Z→A)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mt-4 flex flex-wrap items-center gap-3 text-sm text-gray-400">
+          <span id="resultsCount" class="font-semibold text-gray-300">0 results</span>
+          <button id="clearFilters" class="px-3 py-2 rounded border border-white/20 hover:border-white/50 transition">
+            Clear
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EPISODE GRID ===== -->
+    <section class="px-4 py-10 border-t border-red-900/10">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-end justify-between gap-4 mb-6">
+          <h2 class="text-2xl font-bold">All Shorts</h2>
+          <a href="#top" class="text-sm text-gray-500 hover:text-gray-300">Back to top ↑</a>
+        </div>
+
+        <div id="cards" class="grid md:grid-cols-2 gap-6">
+
+          <!-- META -->
+          <a class="episode-card block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition"
+             href="https://www.youtube.com/shorts/Ieum1ZAy9KI" target="_blank" rel="noopener noreferrer"
+             data-title="Channel Manifesto" data-category="meta" data-tags="manifesto channel mission purpose">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Channel</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">Channel Manifesto</h3>
+            <p class="text-sm text-gray-400">The channel’s mission and why these cases matter.</p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Watch →</div>
+          </a>
+
+          <!-- AUTHORITY -->
+          <a class="episode-card block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition"
+             href="https://www.youtube.com/shorts/sJEYdstU-vk" target="_blank" rel="noopener noreferrer"
+             data-title="$66 Million Dollar Fraud Cop" data-category="authority" data-tags="police fraud corruption badge $66 million">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Authority Theft</span>
+              <span class="text-xs text-gray-500">Amount: $66M</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">$66 Million Dollar Fraud Cop</h3>
+            <p class="text-sm text-gray-400">A badge, public trust, and a massive theft.</p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Watch →</div>
+          </a>
+
+          <a class="episode-card block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition"
+             href="https://www.youtube.com/shorts/9kl5wGEigVY" target="_blank" rel="noopener noreferrer"
+             data-title="Judge That Sold Kids" data-category="authority" data-tags="judge corruption kids for cash juvenile court">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Authority Theft</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">Judge That Sold Kids</h3>
+            <p class="text-sm text-gray-400">A courtroom turned into a profit machine.</p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Watch →</div>
+          </a>
+
+          <a class="episode-card block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition"
+             href="https://www.youtube.com/shorts/FnF3hOVo05g" target="_blank" rel="noopener noreferrer"
+             data-title="Fraud County Treasurer" data-category="authority" data-tags="treasurer county fraud public money">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Authority Theft</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">Fraud County Treasurer</h3>
+            <p class="text-sm text-gray-400">The person guarding the money was the one stealing it.</p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Watch →</div>
+          </a>
+
+          <a class="episode-card block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition"
+             href="https://www.youtube.com/shorts/__NVD5SKm1s" target="_blank" rel="noopener noreferrer"
+             data-title="Police Union President Fraud" data-category="authority" data-tags="police union president fraud corruption">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Authority Theft</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">Police Union President Fraud</h3>
+            <p class="text-sm text-gray-400">A position of trust used for personal gain.</p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Watch →</div>
+          </a>
+
+          <!-- PUBLIC FUNDS / BENEFITS -->
+          <a class="episode-card block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition"
+             href="https://www.youtube.com/shorts/7URCUivBaXw" target="_blank" rel="noopener noreferrer"
+             data-title="Medicare Fraud Machine" data-category="public" data-tags="medicare fraud healthcare billing government benefits">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Public Funds</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">Medicare Fraud Machine</h3>
+            <p class="text-sm text-gray-400">A system built to drain public health money.</p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Watch →</div>
+          </a>
+
+          <a class="episode-card block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition"
+             href="https://www.youtube.com/shorts/HMyZdzSvh1o" target="_blank" rel="noopener noreferrer"
+             data-title="$250M Feeding Kid Scam" data-category="public" data-tags="kids feeding scam $250 million public funds nonprofit">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Public Funds</span>
+              <span class="text-xs text-gray-500">Amount: $250M</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">$250M Feeding Kid Scam</h3>
+            <p class="text-sm text-gray-400">Money meant for kids diverted into fraud.</p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Watch →</div>
+          </a>
+
+          <a class="episode-card block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition"
+             href="https://www.youtube.com/shorts/_4WWszNuRyU" target="_blank" rel="noopener noreferrer"
+             data-title="Amiee Bock Fraud Case" data-category="public" data-tags="aimee bock fraud case feeding kids program minnesota">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Public Funds</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">Amiee Bock Fraud Case</h3>
+            <p class="text-sm text-gray-400">A public program exploited for private enrichment.</p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Watch →</div>
+          </a>
+
+          <!-- AI & CYBER -->
+          <a class="episode-card block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition"
+             href="https://www.youtube.com/shorts/0AqUaUV3HZY" target="_blank" rel="noopener noreferrer"
+             data-title="AI Deepfake Zoom Call" data-category="ai" data-tags="ai deepfake zoom call impersonation fraud">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">AI & Cyber</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">AI Deepfake Zoom Call</h3>
+            <p class="text-sm text-gray-400">Impersonation at scale: new tech, old theft.</p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Watch →</div>
+          </a>
+
+          <a class="episode-card block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition"
+             href="https://www.youtube.com/shorts/9ybF4AEq_To" target="_blank" rel="noopener noreferrer"
+             data-title="AI Voice Scammers" data-category="ai" data-tags="ai voice scammers voice cloning emergency scam">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">AI & Cyber</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">AI Voice Scammers</h3>
+            <p class="text-sm text-gray-400">Voice cloning and urgency as a weapon.</p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Watch →</div>
+          </a>
+
+          <a class="episode-card block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition"
+             href="https://www.youtube.com/shorts/EE76Z9Jv5Ho" target="_blank" rel="noopener noreferrer"
+             data-title="SWIFT Scammers" data-category="ai" data-tags="swift scammers wire fraud banking rails">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">AI & Cyber</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">SWIFT Scammers</h3>
+            <p class="text-sm text-gray-400">Wire fraud exploiting global banking rails.</p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Watch →</div>
+          </a>
+
+          <!-- CONS / SCAMS -->
+          <a class="episode-card block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition"
+             href="https://www.youtube.com/shorts/YNW43ir5he0" target="_blank" rel="noopener noreferrer"
+             data-title="Veggie Oil Fraudster" data-category="cons" data-tags="veggie oil fraud con artist scheme">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Scams & Cons</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">Veggie Oil Fraudster</h3>
+            <p class="text-sm text-gray-400">A classic con dressed up as a legitimate product.</p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Watch →</div>
+          </a>
+
+          <a class="episode-card block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition"
+             href="https://www.youtube.com/shorts/oIiEWuq_1S0" target="_blank" rel="noopener noreferrer"
+             data-title="Connie Bobo's Con" data-category="cons" data-tags="connie bobo con fraud scheme">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Scams & Cons</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">Connie Bobo's Con</h3>
+            <p class="text-sm text-gray-400">A personal betrayal packaged as opportunity.</p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Watch →</div>
+          </a>
+
+          <a class="episode-card block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition"
+             href="https://www.youtube.com/shorts/1FEUmDPDJmc" target="_blank" rel="noopener noreferrer"
+             data-title="Leessa Augustine Scandal" data-category="cons" data-tags="leessa augustine scandal fraud con">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Scams & Cons</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">Leessa Augustine Scandal</h3>
+            <p class="text-sm text-gray-400">A scandal built on trust and extraction.</p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Watch →</div>
+          </a>
+
+          <!-- TRUST NETWORKS -->
+          <a class="episode-card block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition"
+             href="https://www.youtube.com/shorts/ZjcxtTtOlRM" target="_blank" rel="noopener noreferrer"
+             data-title="Crook Pastor Adrian Davis" data-category="church" data-tags="pastor adrian davis church fraud trust">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Trust Networks</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">Crook Pastor Adrian Davis</h3>
+            <p class="text-sm text-gray-400">Spiritual authority turned into a money funnel.</p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Watch →</div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="px-4 py-12 border-t border-red-900/10">
+      <div class="max-w-5xl mx-auto bg-gradient-to-br from-red-900/20 to-black border border-red-900/20 rounded-xl p-7 md:p-10">
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Want protection tools connected to these cases?</h2>
+        <p class="text-gray-300 mb-6 max-w-3xl">
+          If you’re thinking “how do I avoid becoming the next victim,” the Resources page keeps it organized:
+          identity, documentation, reporting, and prevention.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="resources.html" class="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg font-semibold transition">
+            Go to Resources
+          </a>
+          <a href="episodes.html" class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 px-6 py-3 rounded-lg font-semibold transition">
+            Go to Episodes
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="px-4 py-10">
+      <div class="max-w-5xl mx-auto border-t border-red-900/10 pt-6 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+        <div class="text-sm text-gray-400">
+          © <span id="year"></span> Bad Money Times. All rights reserved.
+        </div>
+        <div class="flex gap-4 text-sm">
+          <a class="hover:text-red-500" href="privacy.html">Privacy</a>
+          <a class="hover:text-red-500" href="terms.html">Terms</a>
+          <a class="hover:text-red-500" href="index.html#newsletter">Newsletter</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    // footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // mobile nav toggle
+    (function () {
+      const btn = document.getElementById("mobileToggle");
+      const nav = document.getElementById("mobileNav");
+      if (!btn || !nav) return;
+
+      btn.addEventListener("click", () => {
+        const isHidden = nav.classList.contains("hidden");
+        nav.classList.toggle("hidden", !isHidden);
+        btn.setAttribute("aria-expanded", String(isHidden));
+      });
+    })();
+
+    // archive filtering
+    (function () {
+      const searchInput = document.getElementById("searchInput");
+      const categorySelect = document.getElementById("categorySelect");
+      const sortSelect = document.getElementById("sortSelect");
+      const clearBtn = document.getElementById("clearFilters");
+      const resultsCount = document.getElementById("resultsCount");
+      const cardsWrap = document.getElementById("cards");
+
+      if (!searchInput || !categorySelect || !sortSelect || !clearBtn || !resultsCount || !cardsWrap) return;
+
+      const cards = Array.from(cardsWrap.querySelectorAll(".episode-card"));
+      const originalOrder = cards.slice();
+
+      function normalize(s) {
+        return (s || "").toLowerCase().trim();
+      }
+
+      function apply() {
+        const q = normalize(searchInput.value);
+        const cat = categorySelect.value;
+
+        let visible = 0;
+
+        cards.forEach((card) => {
+          const title = normalize(card.getAttribute("data-title"));
+          const tags = normalize(card.getAttribute("data-tags"));
+          const category = normalize(card.getAttribute("data-category"));
+
+          const matchQuery = !q || title.includes(q) || tags.includes(q);
+          const matchCat = (cat === "all") || (category === cat);
+
+          const show = matchQuery && matchCat;
+          card.style.display = show ? "" : "none";
+          if (show) visible += 1;
+        });
+
+        resultsCount.textContent = `${visible} result${visible === 1 ? "" : "s"}`;
+      }
+
+      function sortCards() {
+        const mode = sortSelect.value;
+
+        // restore original order
+        if (mode === "default") {
+          originalOrder.forEach((c) => cardsWrap.appendChild(c));
+          apply();
+          return;
+        }
+
+        const sorted = cards.slice().sort((a, b) => {
+          const at = normalize(a.getAttribute("data-title"));
+          const bt = normalize(b.getAttribute("data-title"));
+          if (at < bt) return mode === "title_asc" ? -1 : 1;
+          if (at > bt) return mode === "title_asc" ? 1 : -1;
+          return 0;
+        });
+
+        sorted.forEach((c) => cardsWrap.appendChild(c));
+        apply();
+      }
+
+      searchInput.addEventListener("input", apply);
+      categorySelect.addEventListener("change", apply);
+      sortSelect.addEventListener("change", sortCards);
+
+      clearBtn.addEventListener("click", () => {
+        searchInput.value = "";
+        categorySelect.value = "all";
+        sortSelect.value = "default";
+        originalOrder.forEach((c) => cardsWrap.appendChild(c));
+        apply();
+      });
+
+      // initial
+      apply();
+      resultsCount.textContent = `${cards.length} results`;
+    })();
+  </script>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Articles — Bad Money Times</title>
+  <meta name="description" content="Articles and case write-ups from Bad Money Times — financial true crime and authority abuse, based on public records and reporting." />
+
+  <!-- Tailwind CDN (fine for Phase 1) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .logo-img { width: 56px; height: auto; }
+  </style>
+
+  <!-- MailerLite Universal (keep account; embed block can live on index or here later) -->
+  <script>
+    (function (w, d, e, u, f, l, n) {
+      w[f] = w[f] || function () { (w[f].q = w[f].q || []).push(arguments); };
+      l = d.createElement(e); l.async = 1; l.src = u;
+      n = d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l, n);
+    })(window, document, "script", "https://assets.mailerlite.com/js/universal.js", "ml");
+    ml("account", "1927109");
+  </script>
+</head>
+
+<body class="bg-black text-white antialiased">
+
+  <!-- ===== HEADER (matches updated index) ===== -->
+  <header class="fixed w-full z-50 bg-black/95 backdrop-blur-sm border-b border-red-900/30">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/badmoneytimes-1.jpg" alt="Bad Money Times logo" class="logo-img rounded-md object-contain" />
+        <div>
+          <div class="text-lg font-bold">Bad Money Times</div>
+          <div class="text-xs text-gray-400">Financial true crime • authority abuse</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="episodes.html" class="hover:text-red-500 transition">Episodes</a>
+        <a href="articles.html" class="text-red-400 font-semibold">Articles</a>
+        <a href="about.html" class="hover:text-red-500 transition">About</a>
+        <a href="archive.html" class="hover:text-red-500 transition">Archive</a>
+        <a href="resources.html" class="hover:text-red-500 transition">Resources</a>
+        <a href="index.html#newsletter" class="bg-red-600 hover:bg-red-700 px-3 py-2 rounded text-sm font-semibold transition">Subscribe</a>
+      </nav>
+
+      <!-- Mobile menu toggle -->
+      <div class="md:hidden">
+        <button id="mobileToggle" aria-expanded="false" aria-controls="mobileNav" class="p-2 rounded hover:bg-white/5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-white">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="md:hidden hidden px-4 pb-4 border-t border-red-900/10">
+      <a href="episodes.html" class="block py-2">Episodes</a>
+      <a href="articles.html" class="block py-2 text-red-400 font-semibold">Articles</a>
+      <a href="about.html" class="block py-2">About</a>
+      <a href="archive.html" class="block py-2">Archive</a>
+      <a href="resources.html" class="block py-2">Resources</a>
+      <a href="index.html#newsletter" class="block py-2">Subscribe</a>
+    </div>
+  </header>
+
+  <main class="pt-28 pb-16">
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="px-4 py-10">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="inline-flex items-center gap-2 bg-red-600/20 border border-red-600/40 px-3 py-1 rounded-full text-xs font-bold">
+            ARTICLES
+          </span>
+          <span class="text-xs text-gray-400">Evergreen write-ups • short + direct</span>
+        </div>
+
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4">Articles & Case Write-Ups</h1>
+
+        <p class="text-gray-300 text-lg leading-relaxed max-w-3xl">
+          These are plain-language write-ups about scams, frauds, and institutional betrayal.
+          When possible, the core facts come from court records and public reporting.
+        </p>
+
+        <div class="mt-6 grid md:grid-cols-3 gap-4">
+          <div class="bg-black/50 border border-red-900/20 rounded-lg p-4">
+            <div class="text-sm font-bold mb-1">What you’ll get</div>
+            <p class="text-sm text-gray-400">The setup → the mechanism → the damage → the consequence.</p>
+          </div>
+
+          <div class="bg-black/50 border border-red-900/20 rounded-lg p-4">
+            <div class="text-sm font-bold mb-1">What you won’t get</div>
+            <p class="text-sm text-gray-400">No “guru” advice. No fake certainty. No sensational fluff.</p>
+          </div>
+
+          <a href="resources.html" class="bg-black/50 border border-red-900/20 rounded-lg p-4 hover:border-red-600/40 transition block">
+            <div class="text-sm font-bold mb-1">Resources</div>
+            <p class="text-sm text-gray-400">Tools & references related to fraud + protection.</p>
+            <span class="text-sm text-red-400 font-semibold inline-block mt-2">Go to Resources →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TABLE OF CONTENTS / ARTICLE CARDS ===== -->
+    <section class="px-4 py-8 border-t border-red-900/10">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-end justify-between gap-4 mb-6">
+          <h2 class="text-2xl font-bold">Featured Articles</h2>
+          <p class="text-sm text-gray-500">Tip: share “Articles” links in pinned comments for extra trust.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Card 1 -->
+          <a href="#madoff" class="block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Ponzi</span>
+              <span class="text-xs text-gray-500">Evergreen</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">The Bernie Madoff Story</h3>
+            <p class="text-sm text-gray-400">
+              The “steady returns” lie, how the scheme worked, and why trust was the real asset being stolen.
+            </p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Jump to article →</div>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="#worldcom" class="block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Corporate Fraud</span>
+              <span class="text-xs text-gray-500">Evergreen</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">The WorldCom Collapse</h3>
+            <p class="text-sm text-gray-400">
+              How “accounting tricks” turned into billions in fake profits — and what broke when the truth hit.
+            </p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Jump to article →</div>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="#belfort" class="block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Pump & Dump</span>
+              <span class="text-xs text-gray-500">Evergreen</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">The “Wolf of Wall Street” Reality</h3>
+            <p class="text-sm text-gray-400">
+              The sales machine, the manipulation, and the regular people who got chewed up.
+            </p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Jump to article →</div>
+          </a>
+
+          <!-- Card 4 -->
+          <a href="#scam-word" class="block bg-black/50 border border-red-900/15 rounded-lg p-6 hover:border-red-600/40 transition">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Classic Scam</span>
+              <span class="text-xs text-gray-500">Evergreen</span>
+            </div>
+            <h3 class="text-xl font-extrabold mb-2">The Scam That Became a Word</h3>
+            <p class="text-sm text-gray-400">
+              The original playbook: build trust, create urgency, take the money, disappear.
+            </p>
+            <div class="text-sm text-red-400 font-semibold mt-4">Jump to article →</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ARTICLES (clean, scannable) ===== -->
+    <section class="px-4 py-10 border-t border-red-900/10">
+      <div class="max-w-5xl mx-auto space-y-10">
+
+        <!-- ARTICLE: MADOFF -->
+        <article id="madoff" class="bg-black/40 border border-red-900/15 rounded-xl p-6 md:p-8">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Ponzi</span>
+            <span class="text-xs text-gray-500">Evergreen</span>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-extrabold mb-4">The Bernie Madoff Story</h2>
+
+          <p class="text-gray-300 leading-relaxed mb-6">
+            This is the fraud that broke people’s brains because it didn’t look like a scam.
+            It looked like stability. It looked like status. It looked like “smart money.”
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-black/60 border border-red-900/10 rounded-lg p-5">
+              <h3 class="font-bold mb-2">The setup</h3>
+              <p class="text-sm text-gray-400">
+                The pitch wasn’t “get rich quick.” The pitch was “steady returns forever.”
+                That’s how it got the wealthy, the institutions, and the charities.
+              </p>
+            </div>
+
+            <div class="bg-black/60 border border-red-900/10 rounded-lg p-5">
+              <h3 class="font-bold mb-2">The mechanism</h3>
+              <p class="text-sm text-gray-400">
+                New money paid old investors. The “profits” were paper. The trust was real.
+                The moment inflows slowed, the illusion collapsed.
+              </p>
+            </div>
+
+            <div class="bg-black/60 border border-red-900/10 rounded-lg p-5">
+              <h3 class="font-bold mb-2">The damage</h3>
+              <p class="text-sm text-gray-400">
+                Retirements erased. Foundations hollowed out. Regular people wiped out —
+                especially when their money was pooled into “safe” funds.
+              </p>
+            </div>
+
+            <div class="bg-black/60 border border-red-900/10 rounded-lg p-5">
+              <h3 class="font-bold mb-2">The red flag</h3>
+              <p class="text-sm text-gray-400">
+                Any investment that promises consistent, low-volatility returns in all markets
+                is either misunderstood… or manufactured.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+            <a href="resources.html" class="text-red-400 font-semibold hover:text-red-300">Related resources →</a>
+            <a href="#top" class="text-gray-500 text-sm hover:text-gray-300">Back to top</a>
+          </div>
+        </article>
+
+        <!-- ARTICLE: WORLDCOM -->
+        <article id="worldcom" class="bg-black/40 border border-red-900/15 rounded-xl p-6 md:p-8">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Corporate Fraud</span>
+            <span class="text-xs text-gray-500">Evergreen</span>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-extrabold mb-4">The WorldCom Collapse</h2>
+
+          <p class="text-gray-300 leading-relaxed mb-6">
+            This wasn’t a “street scam.” This was a boardroom crime.
+            The product was confidence — until the numbers couldn’t hold the lie.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-black/60 border border-red-900/10 rounded-lg p-5">
+              <h3 class="font-bold mb-2">The setup</h3>
+              <p class="text-sm text-gray-400">
+                Expansion, acquisitions, and a story Wall Street wanted to believe:
+                “We’re dominating telecom — growth forever.”
+              </p>
+            </div>
+
+            <div class="bg-black/60 border border-red-900/10 rounded-lg p-5">
+              <h3 class="font-bold mb-2">The mechanism</h3>
+              <p class="text-sm text-gray-400">
+                Costs were manipulated and shifted to make the company look profitable.
+                The result: financial statements that didn’t reflect reality.
+              </p>
+            </div>
+
+            <div class="bg-black/60 border border-red-900/10 rounded-lg p-5">
+              <h3 class="font-bold mb-2">The damage</h3>
+              <p class="text-sm text-gray-400">
+                Employees lost jobs. Investors got crushed. Retirement accounts took hits.
+                “Just accounting” becomes real life fast.
+              </p>
+            </div>
+
+            <div class="bg-black/60 border border-red-900/10 rounded-lg p-5">
+              <h3 class="font-bold mb-2">The red flag</h3>
+              <p class="text-sm text-gray-400">
+                When a company’s story is stronger than its cash flow, always ask:
+                “Where is the money actually coming from?”
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+            <a href="resources.html" class="text-red-400 font-semibold hover:text-red-300">Related resources →</a>
+            <a href="#top" class="text-gray-500 text-sm hover:text-gray-300">Back to top</a>
+          </div>
+        </article>
+
+        <!-- ARTICLE: SCAM WORD -->
+        <article id="scam-word" class="bg-black/40 border border-red-900/15 rounded-xl p-6 md:p-8">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Classic Scam</span>
+            <span class="text-xs text-gray-500">Evergreen</span>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-extrabold mb-4">The Scam That Became a Word</h2>
+
+          <p class="text-gray-300 leading-relaxed mb-6">
+            Every era has a “new” scam — but the structure is old.
+            The technology changes. The psychology doesn’t.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-black/60 border border-red-900/10 rounded-lg p-5">
+              <h3 class="font-bold mb-2">The hook</h3>
+              <p class="text-sm text-gray-400">
+                Trust transfer: authority, status, exclusivity, or “inside access.”
+              </p>
+            </div>
+
+            <div class="bg-black/60 border border-red-900/10 rounded-lg p-5">
+              <h3 class="font-bold mb-2">The squeeze</h3>
+              <p class="text-sm text-gray-400">
+                Urgency + embarrassment + fear. The victim is pushed to act fast and stay quiet.
+              </p>
+            </div>
+
+            <div class="bg-black/60 border border-red-900/10 rounded-lg p-5">
+              <h3 class="font-bold mb-2">The extraction</h3>
+              <p class="text-sm text-gray-400">
+                Money leaves the victim’s control. Recovery becomes “complicated” on purpose.
+              </p>
+            </div>
+
+            <div class="bg-black/60 border border-red-900/10 rounded-lg p-5">
+              <h3 class="font-bold mb-2">The vanish</h3>
+              <p class="text-sm text-gray-400">
+                The scammer disappears, rebrands, or blames the victim for “not understanding.”
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+            <a href="resources.html" class="text-red-400 font-semibold hover:text-red-300">Related resources →</a>
+            <a href="#top" class="text-gray-500 text-sm hover:text-gray-300">Back to top</a>
+          </div>
+        </article>
+
+        <!-- ARTICLE: BELFORT -->
+        <article id="belfort" class="bg-black/40 border border-red-900/15 rounded-xl p-6 md:p-8">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded">Pump & Dump</span>
+            <span class="text-xs text-gray-500">Evergreen</span>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-extrabold mb-4">The “Wolf of Wall Street” Reality</h2>
+
+          <p class="text-gray-300 leading-relaxed mb-6">
+            The glamorous version is a movie. The real version is a machine:
+            aggressive sales tactics, manipulated pricing, and victims who don’t realize what happened until it’s over.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-black/60 border border-red-900/10 rounded-lg p-5">
+              <h3 class="font-bold mb-2">The setup</h3>
+              <p class="text-sm text-gray-400">
+                A boiler-room culture that rewards persuasion over truth. “Close the deal” becomes the only ethic.
+              </p>
+            </div>
+
+            <div class="bg-black/60 border border-red-900/10 rounded-lg p-5">
+              <h3 class="font-bold mb-2">The mechanism</h3>
+              <p class="text-sm text-gray-400">
+                Push questionable stocks hard, drive demand, control the spread, and dump at the top.
+              </p>
+            </div>
+
+            <div class="bg-black/60 border border-red-900/10 rounded-lg p-5">
+              <h3 class="font-bold mb-2">The damage</h3>
+              <p class="text-sm text-gray-400">
+                Regular people get sold a fantasy and end up holding the bag when the price collapses.
+              </p>
+            </div>
+
+            <div class="bg-black/60 border border-red-900/10 rounded-lg p-5">
+              <h3 class="font-bold mb-2">The red flag</h3>
+              <p class="text-sm text-gray-400">
+                Any “advisor” who pressures you fast, discourages questions, or acts offended by skepticism is a threat.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+            <a href="resources.html" class="text-red-400 font-semibold hover:text-red-300">Related resources →</a>
+            <a href="#top" class="text-gray-500 text-sm hover:text-gray-300">Back to top</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="px-4 py-12 border-t border-red-900/10">
+      <div class="max-w-5xl mx-auto bg-gradient-to-br from-red-900/20 to-black border border-red-900/20 rounded-xl p-7 md:p-10">
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Want the sources + related tools?</h2>
+        <p class="text-gray-300 mb-6 max-w-3xl">
+          If you’re here because of a Short: the site is where we keep things organized.
+          Articles for context. Resources for protection and next steps.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="resources.html" class="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg font-semibold transition">
+            Go to Resources
+          </a>
+          <a href="index.html#newsletter" class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 px-6 py-3 rounded-lg font-semibold transition">
+            Subscribe
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="px-4 py-10">
+      <div class="max-w-5xl mx-auto border-t border-red-900/10 pt-6 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+        <div class="text-sm text-gray-400">
+          © <span id="year"></span> Bad Money Times. All rights reserved.
+        </div>
+        <div class="flex gap-4 text-sm">
+          <a class="hover:text-red-500" href="privacy.html">Privacy</a>
+          <a class="hover:text-red-500" href="terms.html">Terms</a>
+          <a class="hover:text-red-500" href="index.html#newsletter">Newsletter</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    // footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // mobile nav toggle
+    (function () {
+      const btn = document.getElementById("mobileToggle");
+      const nav = document.getElementById("mobileNav");
+      if (!btn || !nav) return;
+
+      btn.addEventListener("click", () => {
+        const isHidden = nav.classList.contains("hidden");
+        nav.classList.toggle("hidden", !isHidden);
+        btn.setAttribute("aria-expanded", String(isHidden));
+      });
+    })();
+  </script>
+
+  <script src="main.js"></script>
+</body>
+</html>
