@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cases — Bad Money Times</title>
+  <meta name="description" content="Bad Money Times cases: a browsable index of fraud cases involving authority abuse and theft from vulnerable people." />
+
+  <!-- Tailwind CDN (fine for Phase 1) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- IMPORTANT: we're inside /cases/, so go up one level for global CSS -->
+  <link rel="stylesheet" href="../styles.css" />
+
+  <style>
+    .logo-img { width: 56px; height: auto; }
+  </style>
+
+  <!-- MailerLite Universal -->
+  <script>
+    (function (w, d, e, u, f, l, n) {
+      w[f] = w[f] || function () { (w[f].q = w[f].q || []).push(arguments); };
+      l = d.createElement(e); l.async = 1; l.src = u;
+      n = d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l, n);
+    })(window, document, "script", "https://assets.mailerlite.com/js/universal.js", "ml");
+    ml("account", "1927109");
+  </script>
+</head>
+
+<body class="bg-black text-white antialiased">
+  <a id="top"></a>
+
+  <!-- ===== HEADER (same styling, paths adjusted) ===== -->
+  <header class="fixed w-full z-50 bg-black/95 backdrop-blur-sm border-b border-red-900/30">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-3">
+        <img src="../assets/badmoneytimes-1.jpg" alt="Bad Money Times logo" class="logo-img rounded-md object-contain" />
+        <div>
+          <div class="text-lg font-bold">Bad Money Times</div>
+          <div class="text-xs text-gray-400">Financial true crime • authority abuse</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="../episodes.html" class="hover:text-red-500 transition">Episodes</a>
+        <a href="../articles.html" class="hover:text-red-500 transition">Articles</a>
+        <a href="../about.html" class="hover:text-red-500 transition">About</a>
+        <a href="../archive.html" class="hover:text-red-500 transition">Archive</a>
+        <a href="../resources.html" class="hover:text-red-500 transition">Resources</a>
+        <a href="index.html" class="text-red-400 font-semibold">Cases</a>
+        <a href="../index.html#newsletter" class="bg-red-600 hover:bg-red-700 px-3 py-2 rounded text-sm font-semibold transition">Subscribe</a>
+      </nav>
+
+      <!-- Mobile menu toggle -->
+      <div class="md:hidden">
+        <button id="mobileToggle" aria-expanded="false" aria-controls="mobileNav" class="p-2 rounded hover:bg-white/5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-white">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="md:hidden hidden px-4 pb-4 border-t border-red-900/10">
+      <a href="../episodes.html" class="block py-2">Episodes</a>
+      <a href="../articles.html" class="block py-2">Articles</a>
+      <a href="../about.html" class="block py-2">About</a>
+      <a href="../archive.html" class="block py-2">Archive</a>
+      <a href="../resources.html" class="block py-2">Resources</a>
+      <a href="index.html" class="block py-2 text-red-400 font-semibold">Cases</a>
+      <a href="../index.html#newsletter" class="block py-2">Subscribe</a>
+    </div>
+  </header>
+
+  <main class="pt-28 pb-16">
+
+    <!-- ===== HERO ===== -->
+    <section class="px-4 py-10">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="inline-flex items-center gap-2 bg-red-600/20 border border-red-600/40 px-3 py-1 rounded-full text-xs font-bold">
+            CASES
+          </span>
+          <span class="text-xs text-gray-400">overview • individual pages • sources</span>
+        </div>
+
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4">Case Overview</h1>
+        <p class="text-gray-300 text-lg leading-relaxed max-w-3xl">
+          Each case has its own page with a short summary, key facts, and links.
+          This is built for browsing and sharing.
+        </p>
+
+        
+      </div>
+    </section>
+
+    <!-- ===== FILTERS ===== -->
+    <section class="px-4 py-8">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-4">
+          <div class="md:col-span-2">
+            <label for="searchInput" class="text-sm text-gray-400">Search</label>
+            <input id="searchInput" type="text" placeholder="Search title, tags, location..."
+              class="mt-1 w-full bg-black/60 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-gray-600 focus:outline-none focus:border-white/40" />
+          </div>
+
+          <div>
+            <label for="categorySelect" class="text-sm text-gray-400">Category</label>
+            <select id="categorySelect"
+              class="mt-1 w-full bg-black/60 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white/40">
+              <option value="all">All</option>
+              <option value="authority">Authority Theft</option>
+              <option value="public">Public Funds / Benefits</option>
+              <option value="ai">AI & Cyber</option>
+              <option value="church">Trust Networks</option>
+              <option value="cons">Scams & Cons</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="sortSelect" class="text-sm text-gray-400">Sort</label>
+            <select id="sortSelect"
+              class="mt-1 w-full bg-black/60 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white/40">
+              <option value="default">Default</option>
+              <option value="title_asc">Title (A→Z)</option>
+              <option value="title_desc">Title (Z→A)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mt-4 flex flex-wrap items-center gap-3 text-sm text-gray-400">
+          <span id="resultsCount" class="font-semibold text-gray-300">0 results</span>
+          <button id="clearFilters" class="px-3 py-2 rounded border border-white/20 hover:border-white/50 transition">
+            Clear
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CASE CARDS GRID ===== -->
+    <section class="px-4 py-10 border-t border-red-900/10">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-end justify-between gap-4 mb-6">
+          <h2 class="text-2xl font-bold">All Cases</h2>
+          <a href="#top" class="text-sm text-gray-500 hover:text-gray-300">Back to top ↑</a>
+        </div>
+
+        <div id="cards" class="grid md:grid-cols-2 gap-6">
+
+          <!-- =========================================================
+               EDIT HERE: ADD A NEW CASE CARD
+               1) Duplicate a whole <a class="case-card"...> block
+               2) Update:
+                  - href="case2.html"
+                  - data-title, data-category, data-tags
+                  - img src="assets/case2.jpg"
+                  - Title/summary text
+               ========================================================= -->
+
+          <a class="case-card block bg-black/50 border border-red-900/15 rounded-xl overflow-hidden hover:border-red-600/40 transition"
+             href="case1.html"
+             data-title="Mr. Social Security"
+             data-category="Scams & Cons"
+             data-tags="The Fraud Disability Laywer Mr Social Security"
+          >
+            <div class="grid grid-cols-5">
+              <div class="col-span-2 bg-black/60">
+                <img src="assets/case1.jpg" alt="Case image" class="w-full h-full object-cover" />
+              </div>
+              <div class="col-span-3 p-6">
+                <div class="flex flex-wrap gap-2 mb-3">
+                  <span class="text-xs font-bold bg-orange-600/20 text-red-300 px-2 py-1 rounded">Scams & Cons</span>
+                  <span class="text-xs text-gray-500">Case 1</span>
+                </div>
+                <h3 class="text-xl font-extrabold mb-2">"Mr. Social Security"</h3>
+                <p class="text-sm text-gray-400">
+                  A disability attorney who manipulated the Social Security system, exposing an estimated $550 million in fraudulent claims..
+                </p>
+                <div class="text-sm text-red-400 font-semibold mt-4">Open case →</div>
+              </div>
+            </div>
+          </a>
+
+          <a class="case-card block bg-black/50 border border-red-900/15 rounded-xl overflow-hidden hover:border-red-600/40 transition"
+   href="case2.html"
+   data-title="The IRS Last Resort Betrayal"
+   data-category="Government Corruption"
+   data-tags="IRS Identity Theft Tax Fraud Taxpayer Advocate Nakeisha Hall"
+>
+  <div class="grid grid-cols-5">
+    <div class="col-span-2 bg-black/60">
+      <img src="assets/case2.jpg" alt="Case image" class="w-fit h-fit object-cover" />
+    </div>
+    <div class="col-span-3 p-6">
+      <div class="flex flex-wrap gap-2 mb-3">
+        <span class="text-xs font-bold bg-orange-600/20 text-red-300 px-2 py-1 rounded">Government Corruption</span>
+        <span class="text-xs text-gray-500">Case</span>
+      </div>
+
+      <h3 class="text-xl font-extrabold mb-2">The IRS “Last Resort” Betrayal</h3>
+
+      <p class="text-sm text-gray-400">
+        An IRS taxpayer advocate stole identities from fraud victims seeking help, using insider access to run a $1 million tax refund scheme.
+      </p>
+
+      <div class="text-sm text-red-400 font-semibold mt-4">Open case →</div>
+    </div>
+  </div>
+</a>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="px-4 py-10">
+      <div class="max-w-5xl mx-auto border-t border-red-900/10 pt-6 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+        <div class="text-sm text-gray-400">
+          © <span id="year"></span> Bad Money Times. All rights reserved.
+        </div>
+        <div class="flex gap-4 text-sm">
+          <a class="hover:text-red-500" href="../privacy.html">Privacy</a>
+          <a class="hover:text-red-500" href="../terms.html">Terms</a>
+          <a class="hover:text-red-500" href="../index.html#newsletter">Newsletter</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    // footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // mobile nav toggle
+    (function () {
+      const btn = document.getElementById("mobileToggle");
+      const nav = document.getElementById("mobileNav");
+      if (!btn || !nav) return;
+
+      btn.addEventListener("click", () => {
+        const isHidden = nav.classList.contains("hidden");
+        nav.classList.toggle("hidden", !isHidden);
+        btn.setAttribute("aria-expanded", String(isHidden));
+      });
+    })();
+
+    // filtering + sorting
+    (function () {
+      const searchInput = document.getElementById("searchInput");
+      const categorySelect = document.getElementById("categorySelect");
+      const sortSelect = document.getElementById("sortSelect");
+      const clearBtn = document.getElementById("clearFilters");
+      const resultsCount = document.getElementById("resultsCount");
+      const cardsWrap = document.getElementById("cards");
+      if (!searchInput || !categorySelect || !sortSelect || !clearBtn || !resultsCount || !cardsWrap) return;
+
+      const cards = Array.from(cardsWrap.querySelectorAll(".case-card"));
+      const originalOrder = cards.slice();
+
+      function normalize(s) { return (s || "").toLowerCase().trim(); }
+
+      function apply() {
+        const q = normalize(searchInput.value);
+        const cat = normalize(categorySelect.value);
+
+        let visible = 0;
+        cards.forEach((card) => {
+          const title = normalize(card.getAttribute("data-title"));
+          const tags = normalize(card.getAttribute("data-tags"));
+          const category = normalize(card.getAttribute("data-category"));
+
+          const matchQuery = !q || title.includes(q) || tags.includes(q);
+          const matchCat = (cat === "all") || (category === cat);
+          const show = matchQuery && matchCat;
+
+          card.style.display = show ? "" : "none";
+          if (show) visible += 1;
+        });
+
+        resultsCount.textContent = `${visible} case${visible === 1 ? "" : "s"}`;
+      }
+
+      function sortCards() {
+        const mode = sortSelect.value;
+
+        if (mode === "default") {
+          originalOrder.forEach((c) => cardsWrap.appendChild(c));
+          apply();
+          return;
+        }
+
+        const sorted = cards.slice().sort((a, b) => {
+          const at = normalize(a.getAttribute("data-title"));
+          const bt = normalize(b.getAttribute("data-title"));
+          if (at < bt) return mode === "title_asc" ? -1 : 1;
+          if (at > bt) return mode === "title_asc" ? 1 : -1;
+          return 0;
+        });
+
+        sorted.forEach((c) => cardsWrap.appendChild(c));
+        apply();
+      }
+
+      searchInput.addEventListener("input", apply);
+      categorySelect.addEventListener("change", apply);
+      sortSelect.addEventListener("change", sortCards);
+
+      clearBtn.addEventListener("click", () => {
+        searchInput.value = "";
+        categorySelect.value = "all";
+        sortSelect.value = "default";
+        originalOrder.forEach((c) => cardsWrap.appendChild(c));
+        apply();
+      });
+
+      // initial
+      apply();
+      resultsCount.textContent = `${cards.length} cases`;
+    })();
+  </script>
+
+  <!-- IMPORTANT: we're inside /cases/, so go up one level for global JS -->
+  <script src="../main.js"></script>
+</body>
+</html>
