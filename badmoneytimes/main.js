@@ -1,45 +1,10 @@
 // main.js — Bad Money Times
-// Mobile nav toggle + scroll reveal animations
+// Scroll reveal animations.
+// NOTE: Mobile nav toggle is handled inline per-page to avoid double-binding.
 
 document.addEventListener("DOMContentLoaded", () => {
-  setupMobileNav();
   setupScrollReveal();
 });
-
-function setupMobileNav() {
-  const toggle = document.getElementById("mobileToggle");
-  const mobileNav = document.getElementById("mobileNav");
-
-  if (!toggle || !mobileNav) return;
-
-  toggle.addEventListener("click", () => {
-    const isHidden = mobileNav.classList.contains("hidden");
-
-    if (isHidden) {
-      mobileNav.classList.remove("hidden");
-      toggle.setAttribute("aria-expanded", "true");
-    } else {
-      mobileNav.classList.add("hidden");
-      toggle.setAttribute("aria-expanded", "false");
-    }
-  });
-
-  // Close mobile nav when a link is clicked
-  mobileNav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileNav.classList.add("hidden");
-      toggle.setAttribute("aria-expanded", "false");
-    });
-  });
-
-  // Close on resize back to desktop
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 768) {
-      mobileNav.classList.add("hidden");
-      toggle.setAttribute("aria-expanded", "false");
-    }
-  });
-}
 
 function setupScrollReveal() {
   const elements = document.querySelectorAll(".reveal");
@@ -58,9 +23,7 @@ function setupScrollReveal() {
         }
       });
     },
-    {
-      threshold: 0.15,
-    }
+    { threshold: 0.15 }
   );
 
   elements.forEach((el) => observer.observe(el));
