@@ -1,4 +1,4 @@
-<!-- resources.html — Bad Money Times (ALL 14 LINKS INCLUDED) -->
+<!-- resources.html — Bad Money Times (CONVERSION REDESIGN + 8 PRODUCTS w/ IMAGES) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resources | Bad Money Times</title>
 
-  <meta name="description" content="Educational and practical resources for fraud awareness, documentation, and personal protection. Some links may be affiliate links." />
+  <meta name="description" content="Fraud-proofing tools and resources used for documentation, identity protection, and money discipline. Some links may be affiliate links." />
 
-  <!-- Tailwind CDN (OK for now; later you can compile locally if you want) -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Global site styles -->
@@ -16,6 +16,18 @@
 
   <style>
     .logo-img { width: 56px; height: auto; }
+    .line-clamp-3{
+      display:-webkit-box;
+      -webkit-line-clamp:3;
+      -webkit-box-orient:vertical;
+      overflow:hidden;
+    }
+    .line-clamp-6{
+      display:-webkit-box;
+      -webkit-line-clamp:6;
+      -webkit-box-orient:vertical;
+      overflow:hidden;
+    }
   </style>
 
   <!-- MailerLite Universal -->
@@ -39,16 +51,17 @@
         <img src="assets/badmoneytimes-1.jpg" alt="Bad Money Times logo" class="logo-img rounded-md object-contain" />
         <div>
           <div class="text-lg font-bold">Bad Money Times</div>
-          <div class="text-xs text-gray-400">Financial True Crime • Authority Abuse</div>
+          <div class="text-xs text-gray-400">Financial true crime • authority abuse</div>
         </div>
       </a>
 
       <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="episodes.html" class="hover:text-red-500 transition">Episodes</a>
+        <a href="index.html" class="hover:text-red-500 transition">Home</a>
+		<a href="episodes.html" class="hover:text-red-500 transition">Episodes</a>
         <a href="cases/index.html" class="hover:text-red-500 transition">Cases</a>
         <a href="archive.html" class="hover:text-red-500 transition">Archive</a>
         <a href="articles.html" class="hover:text-red-500 transition">Articles</a>
-        <a href="resources.html" class="hover:text-red-500 transition">Resources</a>
+        <a href="resources.html" class="text-red-400 hover:text-red-300 transition">Resources</a>
         <a href="#newsletter" class="bg-red-600 hover:bg-red-700 px-3 py-2 rounded text-sm font-semibold transition">Subscribe</a>
       </nav>
 
@@ -64,11 +77,12 @@
 
     <!-- Mobile nav -->
     <div id="mobileNav" class="md:hidden hidden px-4 pb-4 border-t border-red-900/10">
-      <a href="episodes.html" class="block py-2">Episodes</a>
+      <a href="index.html" class="block py-2">Home</a>
+	  <a href="episodes.html" class="block py-2">Episodes</a>
       <a href="cases/index.html" class="block py-2">Cases</a>
       <a href="archive.html" class="block py-2">Archive</a>
       <a href="articles.html" class="block py-2">Articles</a>
-      <a href="resources.html" class="block py-2">Resources</a>
+      <a href="resources.html" class="block py-2 text-red-400">Resources</a>
       <a href="#newsletter" class="block py-2">Subscribe</a>
     </div>
   </header>
@@ -77,126 +91,265 @@
   <div class="h-20"></div>
 
   <!-- Hero -->
-  <section class="px-4 py-12">
+  <section class="px-4 pt-10 pb-8">
     <div class="max-w-6xl mx-auto">
       <div class="inline-flex items-center gap-2 bg-red-600/20 border border-red-600/40 px-3 py-1 rounded-full text-xs font-bold mb-4">
         RESOURCES
       </div>
 
-      <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">
-        Tools for Fraud Awareness, Documentation, and Personal Protection
-      </h1>
+      <div class="grid lg:grid-cols-12 gap-6 items-start">
+        <div class="lg:col-span-8">
+          <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">
+            Tools that make fraud harder and documentation easier.
+          </h1>
+          <p class="mt-3 text-gray-300 max-w-3xl">
+            These are practical, no-BS resources that match the Bad Money Times mission:
+            spot patterns, reduce exposure, keep a clean paper trail, and make identity theft more expensive.
+          </p>
 
-      <p class="mt-3 text-gray-300 max-w-3xl">
-        This page is intentionally simple—no hype, no storefront vibe. Just practical resources that line up with the mission:
-        protect people from scams, document abuse, and keep your money and identity harder to steal.
-      </p>
+          <div class="mt-5 flex flex-wrap gap-2 text-sm">
+            <a href="#top-picks" class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10">Top picks</a>
+            <a href="#education" class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10">Education</a>
+            <a href="#protection" class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10">Protection</a>
+            <a href="#storage" class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10">Backups & Storage</a>
+            <a href="#money" class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10">Money discipline</a>
+          </div>
+        </div>
 
-      <div class="mt-6 bg-black/60 border border-red-900/20 rounded-xl p-4">
-        <p class="text-sm text-gray-300">
-          <span class="font-semibold text-white">Affiliate disclosure:</span>
-          Some links below are affiliate links. As an Amazon Associate I earn from qualifying purchases.
-        </p>
+        <!-- Trust / Disclosure Card -->
+        <aside class="lg:col-span-4 bg-black/60 border border-red-900/20 rounded-2xl p-5">
+          <h2 class="text-base font-bold text-white">Quick notes</h2>
+          <ul class="mt-3 space-y-2 text-sm text-gray-300">
+            <li class="flex gap-2"><span class="text-red-400">•</span> Affiliate disclosure: Some links are affiliate links. As an Amazon Associate I earn from qualifying purchases.</li>
+            <li class="flex gap-2"><span class="text-red-400">•</span> No “miracle fixes.” These are basic tools that add friction for thieves.</li>
+            <li class="flex gap-2"><span class="text-red-400">•</span> If you only buy one thing: start with <span class="text-white font-semibold">document protection + a tracker</span>.</li>
+          </ul>
+          <a href="#newsletter" class="mt-4 inline-flex w-full justify-center bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-semibold text-sm transition">
+            Get new case drops
+          </a>
+        </aside>
       </div>
 
-      <!-- Quick Nav -->
-      <div class="mt-6 flex flex-wrap gap-2 text-sm">
-        <a href="#education" class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10">Education (4)</a>
-        <a href="#protection" class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10">Identity & Document Protection (4)</a>
-        <a href="#documentation" class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10">Documentation & Storage (4)</a>
-        <a href="#organization" class="px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10">Budgeting & Tracking (2)</a>
+      <!-- Search + Filters -->
+      <div class="mt-8 bg-black/60 border border-red-900/20 rounded-2xl p-4">
+        <div class="grid md:grid-cols-12 gap-3 items-center">
+          <div class="md:col-span-6">
+            <label for="search" class="text-xs font-semibold text-gray-300">Search resources</label>
+            <input id="search" type="text" placeholder="Try: wallet, fireproof, scanner, corruption..."
+              class="mt-1 w-full bg-black/70 border border-white/10 rounded-lg px-3 py-2 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-red-600/60" />
+          </div>
+
+          <div class="md:col-span-3">
+            <label for="category" class="text-xs font-semibold text-gray-300">Category</label>
+            <select id="category"
+              class="mt-1 w-full bg-black/70 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-red-600/60">
+              <option value="all">All</option>
+              <option value="education">Education</option>
+              <option value="protection">Identity & Document Protection</option>
+              <option value="storage">Backups & Storage</option>
+              <option value="money">Budgeting & Tracking</option>
+            </select>
+          </div>
+
+          <div class="md:col-span-3 flex md:justify-end">
+            <button id="clearFilters"
+              class="mt-5 md:mt-0 w-full md:w-auto px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 text-sm font-semibold transition">
+              Clear
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Picks -->
+  <section id="top-picks" class="px-4 py-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-extrabold text-white">Top picks (start here)</h2>
+          <p class="mt-2 text-gray-300 max-w-3xl">
+            These are the fastest “impact per dollar” items for most people: reduce exposure + protect records + track money.
+          </p>
+        </div>
+        <a href="#education" class="hidden md:inline-flex text-sm font-semibold text-red-400 hover:text-red-300">
+          Browse all categories →
+        </a>
+      </div>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-4">
+        <!-- Pick 1 -->
+        <a href="#prod-4" class="group bg-black/60 border border-red-900/20 rounded-2xl p-4 hover:border-red-600/40 transition">
+          <div class="flex items-center gap-3">
+            <img src="assets/resources/prod_4.jpg" alt="Fireproof Document Bags" class="w-16 h-16 rounded-xl object-cover border border-white/10" />
+            <div>
+              <div class="text-xs text-gray-400">Document protection</div>
+              <div class="font-bold text-white group-hover:text-red-300 transition">Fireproof Document Bags (4 Pack)</div>
+            </div>
+          </div>
+          <div class="mt-3 text-sm text-gray-300 line-clamp-3">
+            Built for real emergencies. Fireproof + waterproof. High-viz strip for fast evacuation.
+          </div>
+        </a>
+
+        <!-- Pick 2 -->
+        <a href="#prod-5" class="group bg-black/60 border border-red-900/20 rounded-2xl p-4 hover:border-red-600/40 transition">
+          <div class="flex items-center gap-3">
+            <img src="assets/resources/prod_5.jpg" alt="Kepmem Flash Drives" class="w-16 h-16 rounded-xl object-cover border borderwhite/10 border border-white/10" />
+            <div>
+              <div class="text-xs text-gray-400">Backups</div>
+              <div class="font-bold text-white group-hover:text-red-300 transition">Kepmem Flash Drive 64GB (10-pack)</div>
+            </div>
+          </div>
+          <div class="mt-3 text-sm text-gray-300 line-clamp-3">
+            Cheap redundancy. Keep copies of scans, receipts, and case paperwork.
+          </div>
+        </a>
+
+        <!-- Pick 3 -->
+        <a href="#prod-7" class="group bg-black/60 border border-red-900/20 rounded-2xl p-4 hover:border-red-600/40 transition">
+          <div class="flex items-center gap-3">
+            <img src="assets/resources/prod_7.jpg" alt="Clever Fox Budget Planner" class="w-16 h-16 rounded-xl object-cover border border-white/10" />
+            <div>
+              <div class="text-xs text-gray-400">Money discipline</div>
+              <div class="font-bold text-white group-hover:text-red-300 transition">Clever Fox Budget Planner (A5)</div>
+            </div>
+          </div>
+          <div class="mt-3 text-sm text-gray-300 line-clamp-3">
+            Visibility beats vibes. Track spending, debt, savings, and bills in one system.
+          </div>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- ========================= -->
-  <!-- EDUCATION (4)             -->
+  <!-- EDUCATION (2)             -->
   <!-- ========================= -->
   <section id="education" class="px-4 py-10">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-2xl font-extrabold text-white">Education</h2>
-      <p class="mt-2 text-gray-300 max-w-3xl">
-        The goal is pattern recognition: scams, corruption incentives, and how people get maneuvered into bad decisions.
-      </p>
-
-      <div class="mt-6 grid md:grid-cols-2 gap-4">
-        <!-- 1 -->
-        <article class="bg-black/60 border border-red-900/20 rounded-xl p-5">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-lg font-bold text-white">
-              OFFENSIVE INTELLIGENCE: 300 techniques, tools and tips to know everything about everyone, in business and elsewhere
-            </h3>
-            <span class="shrink-0 text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">#1</span>
-          </div>
-          <p class="mt-2 text-sm text-gray-300">
-            A research/OSINT-style reference for how information gets gathered and used—good for understanding modern manipulation tactics.
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-extrabold text-white">Education</h2>
+          <p class="mt-2 text-gray-300 max-w-3xl">
+            Pattern recognition: scams, corruption incentives, and how manipulation works.
           </p>
-          <div class="mt-4">
-            <a class="inline-flex items-center gap-2 text-sm font-semibold text-red-400 hover:text-red-300"
-               href="https://www.amazon.com/OFFENSIVE-INTELLIGENCE-techniques-everything-elsewhere/dp/B0C7FHL7TT?crid=2ZN36WM70SR3M&dib=eyJ2IjoiMSJ9.S1D42BTLhh75AoNUctrdye9jIeaqMPHT971gJQ8_CRs.PJYIsh6lNa8gsJZ76vTxSf7gTHbFc35RIC7k2dJoqb4&dib_tag=se&keywords=financial+fraud+investigative+journalism+book&qid=1767765498&sprefix=financial+fraud+investigative+journalism+book%2Caps%2C300&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9idGY&psc=1&linkCode=ll1&tag=vegasmultum70-20&linkId=415a0f7b92be2ec9f0fb0448de889363&language=en_US&ref_=as_li_ss_tl"
-               target="_blank" rel="nofollow noopener">
-              View on Amazon <span aria-hidden="true">↗</span>
-            </a>
+        </div>
+        <span class="text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">2 items</span>
+      </div>
+
+      <div class="mt-6 grid lg:grid-cols-2 gap-4">
+        <!-- PROD 1 -->
+        <article id="prod-1" data-category="education" class="product-card bg-black/60 border border-red-900/20 rounded-2xl overflow-hidden">
+          <div class="p-5 flex gap-4">
+            <img src="assets/resources/prod_1.jpg" alt="OFFENSIVE INTELLIGENCE book cover" class="w-28 h-36 rounded-xl object-cover border border-white/10" />
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-bold bg-red-600/20 border border-red-600/40 px-2 py-1 rounded-lg text-red-200">OSINT / Intelligence</span>
+                <span class="text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">Best for: investigators</span>
+              </div>
+
+              <h3 class="mt-2 text-lg font-extrabold text-white">
+                OFFENSIVE INTELLIGENCE: 300 techniques, tools and tips to know everything about everyone, in business and elsewhere
+              </h3>
+
+              <div class="mt-2 text-sm text-gray-300">
+                <div class="line-clamp-6" data-fulltext>
+                  The definitive handbook of business intelligence. New updated edition, 440 pages.
+                  Offensive Intelligence is a compendium of tips, tools and techniques for finding out everything about everyone, in the corporate world and beyond.
+
+                  Who are the readers of "Offensive Intelligence"?
+                  Investigators.
+                  Journalists.
+                  Strategic intelligence professionals.
+                  Lawyers.
+                  Accountants.
+                  Tax auditors.
+                  Security managers.
+                  Fraud professionals.
+                  Executives of small to medium-sized companies.
+                  Financial, marketing or recruitment managers.
+                  Debt collection specialists.
+                  Investors looking for tools to secure their projects.
+
+                  This book is for you if you want to:
+                  Master Google Hacking and in-depth Google research techniques.
+                  Uncover hidden information, poorly protected documents and databases.
+                  Walk in the Darkweb without (too much) risk.
+                  Know everything about your competitors' or partners' projects.
+                  Learn how to use OSINT tools (open source intelligence) for finding business data.
+                  Become familiar with spy equipment (basic level).
+                  Find a person anywhere in the world.
+                  Locate a place from a picture.
+                  Test facial recognition (it’s just amazing).
+                  Understand how easy it is to usurp an identity.
+                  Use the most recent methods to track the best candidates for a job.
+                  Find out everything about the financial health of a company.
+                  Find unlikely information on social networks.
+                  Detect lies.
+                  Learn the techniques of field investigation.
+                  This is a book for learning. It is not written to be read but to be experienced.
+
+                  Philippe Dylewski trained as a psychologist. He ran a human resources consultancy before becoming a private detective, specializing in the search for missing persons.
+                  Later, he developed a business intelligence practice.
+                  Based in Thailand, he coordinates the activities of an international network of private investigators.
+                  He published his first book in France in 2009 and hasn't stopped writing since.
+                </div>
+              </div>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <a href="https://www.amazon.com/OFFENSIVE-INTELLIGENCE-techniques-everything-elsewhere/dp/B0C7FHL7TT?crid=2ZN36WM70SR3M&dib=eyJ2IjoiMSJ9.S1D42BTLhh75AoNUctrdye9jIeaqMPHT971gJQ8_CRs.PJYIsh6lNa8gsJZ76vTxSf7gTHbFc35RIC7k2dJoqb4&dib_tag=se&keywords=financial+fraud+investigative+journalism+book&qid=1767765498&sprefix=financial+fraud+investigative+journalism+book%2Caps%2C300&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9idGY&psc=1&linkCode=ll2&tag=vegasmultum70-20&linkId=521493708822fc47a8bf5c1d9a46f4f9&language=en_US&ref_=as_li_ss_tl"
+                   target="_blank" rel="nofollow noopener"
+                   class="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-semibold text-sm transition">
+                  View on Amazon <span aria-hidden="true">↗</span>
+                </a>
+                <button class="toggle-desc px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 text-sm font-semibold transition">
+                  Expand description
+                </button>
+              </div>
+
+              <p class="mt-3 text-xs text-gray-400">
+                Affiliate link. Price may change on Amazon.
+              </p>
+            </div>
           </div>
         </article>
 
-        <!-- 2 -->
-        <article class="bg-black/60 border border-red-900/20 rounded-xl p-5">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-lg font-bold text-white">
-              Corruption and Government: Causes, Consequences, and Reform (2nd Edition)
-            </h3>
-            <span class="shrink-0 text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">#2</span>
-          </div>
-          <p class="mt-2 text-sm text-gray-300">
-            A policy-focused look at how corruption forms, scales, and survives inside institutions.
-          </p>
-          <div class="mt-4">
-            <a class="inline-flex items-center gap-2 text-sm font-semibold text-red-400 hover:text-red-300"
-               href="https://www.amazon.com/Corruption-Government-2ed-Causes-Consequences/dp/1107441099?crid=2UP5689QYU67I&dib=eyJ2IjoiMSJ9.qsSVXUjUq-x0Tsx-wiKYZ-sPXrq9-Fe3Rx7pVWG0r503R1BvtqiTHhnR1vBXvIBLjlfrYVJ5X2AML4-jg6yRLXCtKS-q0MOSGzhFosrd_U-jC1h3LkWd0LNgHmvBggVj0hDcJFoufeUfPmSyH9cGLcF8IFO9HllqRsJbyqWt_agXVtuoe6nfqPkiq0p4ne7j7fM-KsYgEcNly5-2F_ILzUhJ-aG7Melym9HHV6hhZGU.jYNcnXl3NNosSEc4hLe43ZDD_P8Tc4yInknCNcwBE34&dib_tag=se&keywords=government+corruption+investigative+book&qid=1767765681&sprefix=government+corruption+investigative+book%2Caps%2C341&sr=8-2&linkCode=ll1&tag=vegasmultum70-20&linkId=92f780d2d0ef30a000800770ecce4efd&language=en_US&ref_=as_li_ss_tl"
-               target="_blank" rel="nofollow noopener">
-              View on Amazon <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </article>
+        <!-- PROD 2 -->
+        <article id="prod-2" data-category="education" class="product-card bg-black/60 border border-red-900/20 rounded-2xl overflow-hidden">
+          <div class="p-5 flex gap-4">
+            <img src="assets/resources/prod_2.jpg" alt="Corruption and Government book cover" class="w-28 h-36 rounded-xl object-cover border border-white/10" />
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-bold bg-red-600/20 border border-red-600/40 px-2 py-1 rounded-lg text-red-200">Corruption / Policy</span>
+                <span class="text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">Best for: understanding systems</span>
+              </div>
 
-        <!-- 3 -->
-        <article class="bg-black/60 border border-red-900/20 rounded-xl p-5">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-lg font-bold text-white">
-              The Scam Survival Guide 2025: because "it won't happen to me" is not a strategy!
-            </h3>
-            <span class="shrink-0 text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">#3</span>
-          </div>
-          <p class="mt-2 text-sm text-gray-300">
-            Consumer-focused scam patterns and prevention habits. Good “baseline defense” reading.
-          </p>
-          <div class="mt-4">
-            <a class="inline-flex items-center gap-2 text-sm font-semibold text-red-400 hover:text-red-300"
-               href="https://www.amazon.com/Scam-Survival-Guide-2025-strategy/dp/B0G43W4N77?crid=105GFG20OHJTI&dib=eyJ2IjoiMSJ9.AMuaxve4bWwbVUSgDhmA-6FV_L1E0UN4Kqa4KS7VkuQ_agciXkO3tzDFmrnYIDtH6SG4fkzIqFeGPtgeIHV8cs11QBfzigTzLGdMWkdVpXp1FSUnunnqlLdRJbyJ6xMd6Gz9Blan8qe27p4TBarXbE0McwRNpAmEvfrc9m7LxUSwv88J2IxKVgucNmxptqmHfUltjl9-lok4red9hlok1ofz-eQByls6AYrtp2H9H3Lo.tKVjeE2orgdu_9rdkiGit19DJZC2urfHfolB4BwaSIw&dib_tag=se&keywords=consumer+scam+prevention+book&qid=1767765765&sprefix=consumer+scam+prevention+book%2Caps%2C245&sr=8-2&linkCode=ll1&tag=vegasmultum70-20&linkId=f780d7bdb53bbec03f5f69378be65c6f&language=en_US&ref_=as_li_ss_tl"
-               target="_blank" rel="nofollow noopener">
-              View on Amazon <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </article>
+              <h3 class="mt-2 text-lg font-extrabold text-white">
+                Corruption and Government: Causes, Consequences, and Reform
+              </h3>
 
-        <!-- 4 -->
-        <article class="bg-black/60 border border-red-900/20 rounded-xl p-5">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-lg font-bold text-white">
-              The Infographic Guide to Personal Finance: A Visual Reference for Everything You Need to Know
-            </h3>
-            <span class="shrink-0 text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">#4</span>
-          </div>
-          <p class="mt-2 text-sm text-gray-300">
-            A visual “reset” for personal finance basics. Great if you want the fundamentals laid out clean.
-          </p>
-          <div class="mt-4">
-            <a class="inline-flex items-center gap-2 text-sm font-semibold text-red-400 hover:text-red-300"
-               href="https://www.amazon.com/Infographic-Guide-Personal-Finance-Everything/dp/1507204663?crid=MURDPGTN3ZJP&dib=eyJ2IjoiMSJ9.1Biz9o5_whYWqBT7r99P2C6CsO1Ip56yhe33jGXLpiTVQ7JEB6iAVCcW_AXN6EZQ3CkFOYdi9SRT_-iFi0sTar62e45hRtDEWrQdwksJh6ApXmwkwtSboRUqLLK6wzUdIoxvYs5Hzhu6eF8emqdtbz4UXnwz21S5ht1-LftxGQrfFPR43QxF74ef3WU7K9qhtIVXxb0xDSETFUY_XxBaOLYFSLokDUKy0s_GkExth7A.JUR-dYKwpZn9FNC8kCcMNm8Sf1tkpe86XkRuJVPFHtQ&dib_tag=se&keywords=personal+finance+protection+book&qid=1767765817&sprefix=personal+finance+protection+book%2Caps%2C308&sr=8-1&linkCode=ll1&tag=vegasmultum70-20&linkId=46395f18c5c0ff2e544c6f015d34180f&language=en_US&ref_=as_li_ss_tl"
-               target="_blank" rel="nofollow noopener">
-              View on Amazon <span aria-hidden="true">↗</span>
-            </a>
+              <div class="mt-2 text-sm text-gray-300">
+                <div class="line-clamp-6" data-fulltext>
+                  The second edition of Corruption and Government updates Susan Rose-Ackerman's 1999 book to address emerging issues and to rethink old questions in light of new data. The book analyzes the research explosion that accompanied the fall of the Berlin Wall, the founding of Transparency International, and the World Bank's decision to give anti-corruption policy a key place on its agenda. Time has vindicated Rose-Ackerman's emphasis on institutional reform as the necessary condition for serious progress. The book deals with routine payoffs and with corruption in contracting and privatization. It gives special attention to political corruption and to instruments of accountability. The authors have expanded the treatment of culture as a source of entrenched corruption and added chapters on criminal law, organized crime, and post-conflict societies. The book outlines domestic conditions for reform and discusses international initiatives - including both explicit anti-corruption policies and efforts to constrain money laundering.
+                </div>
+              </div>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <a href="https://www.amazon.com/Corruption-Government-2ed-Causes-Consequences/dp/1107441099?crid=2UP5689QYU67I&dib=eyJ2IjoiMSJ9.qsSVXUjUq-x0Tsx-wiKYZ-sPXrq9-Fe3Rx7pVWG0r503R1BvtqiTHhnR1vBXvIBLjlfrYVJ5X2AML4-jg6yRLXCtKS-q0MOSGzhFosrd_U-jC1h3LkWd0LNgHmvBggVj0hDcJFoufeUfPmSyH9cGLcF8IFO9HllqRsJbyqWt_agXVtuoe6nfqPkiq0p4ne7j7fM-KsYgEcNly5-2F_ILzUhJ-aG7Melym9HHV6hhZGU.jYNcnXl3NNosSEc4hLe43ZDD_P8Tc4yInknCNcwBE34&dib_tag=se&keywords=government+corruption+investigative+book&qid=1767765681&sprefix=government+corruption+investigative+book%2Caps%2C341&sr=8-2&linkCode=ll2&tag=vegasmultum70-20&linkId=79c2454579ba4f265f2600eba4f5398e&language=en_US&ref_=as_li_ss_tl"
+                   target="_blank" rel="nofollow noopener"
+                   class="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-semibold text-sm transition">
+                  View on Amazon <span aria-hidden="true">↗</span>
+                </a>
+                <button class="toggle-desc px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 text-sm font-semibold transition">
+                  Expand description
+                </button>
+              </div>
+
+              <p class="mt-3 text-xs text-gray-400">
+                Affiliate link. Price may change on Amazon.
+              </p>
+            </div>
           </div>
         </article>
       </div>
@@ -204,77 +357,115 @@
   </section>
 
   <!-- ========================= -->
-  <!-- PROTECTION (4)            -->
+  <!-- PROTECTION (2)            -->
   <!-- ========================= -->
   <section id="protection" class="px-4 py-10">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-2xl font-extrabold text-white">Identity & Document Protection</h2>
-      <p class="mt-2 text-gray-300 max-w-3xl">
-        Basic tools that reduce exposure and create friction for thieves.
-      </p>
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-extrabold text-white">Identity & Document Protection</h2>
+          <p class="mt-2 text-gray-300 max-w-3xl">
+            Basic tools that reduce exposure and create friction for thieves.
+          </p>
+        </div>
+        <span class="text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">2 items</span>
+      </div>
 
-      <div class="mt-6 grid md:grid-cols-2 gap-4">
-        <!-- 5 -->
-        <article class="bg-black/60 border border-red-900/20 rounded-xl p-5">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-lg font-bold text-white">Minimalist Wallet for Men (RFID Blocking Metal Wallet + Money Clip)</h3>
-            <span class="shrink-0 text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">#5</span>
-          </div>
-          <p class="mt-2 text-sm text-gray-300">Compact daily carry option with RFID blocking.</p>
-          <div class="mt-4">
-            <a class="inline-flex items-center gap-2 text-sm font-semibold text-red-400 hover:text-red-300"
-               href="https://www.amazon.com/gp/aw/d/B0CSWN363V?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=db44188367d7f9f5050d55b35d277a8e&hsa_cr_id=0&qid=1767765878&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=JHFP0&content-id=amzn1.sym.9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d%3Aamzn1.sym.9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d&pf_rd_p=9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d&pf_rd_r=PFX1HCX1301TRP60QYBA&pd_rd_wg=61ajX&pd_rd_r=8ed8e166-9abb-482e-8b7b-aea16c38104f&th=1&linkCode=ll1&tag=vegasmultum70-20&linkId=4b7818ba101fa634f9fd2aa497bcc574&language=en_US&ref_=as_li_ss_tl"
-               target="_blank" rel="nofollow noopener">
-              View on Amazon <span aria-hidden="true">↗</span>
-            </a>
+      <div class="mt-6 grid lg:grid-cols-2 gap-4">
+        <!-- PROD 3 -->
+        <article id="prod-3" data-category="protection" class="product-card bg-black/60 border border-red-900/20 rounded-2xl overflow-hidden">
+          <div class="p-5 flex gap-4">
+            <img src="assets/resources/prod_3.jpg" alt="Minimalist Wallet" class="w-28 h-36 rounded-xl object-cover border border-white/10" />
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-bold bg-red-600/20 border border-red-600/40 px-2 py-1 rounded-lg text-red-200">RFID / Daily carry</span>
+                <span class="text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">Best for: travel</span>
+              </div>
+
+              <h3 class="mt-2 text-lg font-extrabold text-white">
+                Upgraded Hinged Minimalist Wallet for Men | Slim Metal RFID Blocking Wallet | Credit Card Holder & Money Clip Holds 20 Cards | Premium Scratch-Resistant Finish | Ideal Gift for Men
+              </h3>
+
+              <div class="mt-2 text-sm text-gray-300">
+                <div class="line-clamp-6" data-fulltext>
+                  Brand	Lenvoten
+                  Color	S1-Matte Black
+                  Material	Aerospace Aluminum Metal
+                  Style	Aerospace Aluminum Metal Matte Black
+                  Pattern	Money clip wallets for men
+                  About this item
+                  【Beyond Slim: A Revolution in Your Pocket】Liberate yourself from the bulk and clutter of traditional wallets. Our minimalist wallet is precision-machined from a single sheet of aerospace-grade aluminum, achieving an ultra-slim profile that feels almost invisible in your pocket (a mere 0.2" thin). It's not just a slim wallet; it's a declaration of freedom for your daily carry, whether you're in gym shorts or a tailored suit. Experience the pure joy of a compact wallet that eliminates the unsightly bulge forever
+                  【Engineered Capacity: Hinged for Strength, Designed for Life】Don't let the slim size fool you. At the heart of this metal wallet lies our revolutionary reinforced hinge—a piece of mechanical artistry built to last a lifetime. This robust mechanism effortlessly manages your entire collection, securely holding 1-20 cards without strain. Paired with the versatile, easy-to-use money clip, it consolidates your cash and cards into one streamlined, powerful men's wallet. It’s the intelligent, heavy-duty solution for the modern man
+                  【Your Digital Armor: Unbreachable RFID Security】In today's world, your wallet is your first line of defense. This RFID blocking wallet is your silent guardian, featuring full-spectrum shielding that creates an impenetrable Faraday cage around your cards. Rest assured, your financial and personal data on credit, debit, and ID cards are completely safe from digital theft. This essential travel wallet feature offers you undeniable peace of mind, anywhere in the world
+                  【Fluid One-Hand Access: The Thumb Groove of Genius】We obsessed over the perfect card access. The ingeniously designed thumb groove is more than a feature; it's an extension of your hand. With a single, natural press, your desired card glides out smoothly and securely. This easy-access card holder for men transforms a daily friction into a moment of effortless pleasure, proving that superior minimalist design is always the most functional
+                  【The Heirloom-Grade Gift: A Story in Every Detail】This is more than an accessory; it's a keepsake. Crafted from premium materials with a flawless, scratch-resistant finish, it's designed to age with grace. Presented in our premium gift box, it arrives ready to become a cherished present. As the perfect Gift for Men, it speaks volumes of your taste—ideal for Father's Day, Christmas, a birthday, or to mark any milestone. It’s not just a gift they'll use; it's a story they'll carry
+                  【Lifetime Service & Support】We are so confident in the exceptional durability of our metal wallet that we back it with our Lifetime Service commitment. Should any issue ever arise with your minimalist wallet, our dedicated support team is here to provide prompt solutions and ensure it remains a trusted part of your journey for years to come. It's not just a purchase; it's a lifelong partnership, guaranteed to be the last slim wallet you'll ever need to buy
+                </div>
+              </div>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <a href="https://www.amazon.com/gp/aw/d/B0CSWN363V?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=db44188367d7f9f5050d55b35d277a8e&hsa_cr_id=0&qid=1767765878&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=JHFP0&content-id=amzn1.sym.9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d%3Aamzn1.sym.9f2b2b9e-47e9-4764-a4dc-2-be2f6fca36d&pf_rd_p=9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d&pf_rd_r=PFX1HCX1301TRP60QYBA&pd_rd_wg=61ajX&pd_rd_r=8ed8e166-9abb-482e-8b7b-aea16c38104f&th=1&linkCode=ll2&tag=vegasmultum70-20&linkId=c6abe016c8dd6198e8ae4759c81c66c3&language=en_US&ref_=as_li_ss_tl"
+                   target="_blank" rel="nofollow noopener"
+                   class="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-semibold text-sm transition">
+                  View on Amazon <span aria-hidden="true">↗</span>
+                </a>
+                <button class="toggle-desc px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 text-sm font-semibold transition">
+                  Expand description
+                </button>
+              </div>
+
+              <p class="mt-3 text-xs text-gray-400">
+                Affiliate link. Price may change on Amazon.
+              </p>
+            </div>
           </div>
         </article>
 
-        <!-- 6 -->
-        <article class="bg-black/60 border border-red-900/20 rounded-xl p-5">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-lg font-bold text-white">Fireproof Document Bags (4 Pack) — Waterproof Zipper Pouches</h3>
-            <span class="shrink-0 text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">#6</span>
-          </div>
-          <p class="mt-2 text-sm text-gray-300">A basic protective layer for legal-size documents, cash, and backups.</p>
-          <div class="mt-4">
-            <a class="inline-flex items-center gap-2 text-sm font-semibold text-red-400 hover:text-red-300"
-               href="https://www.amazon.com/Fireproof-Document-Waterproof-Envelope-Resistant/dp/B0FDWC8G75?crid=35OY9V1R5ZUWW&dib=eyJ2IjoiMSJ9.RQNDQdcUN-iciH5FB4RDFFDu3F_NmChAOl5qrUtbEMoHfG_RE_1riZbXit76DAy-2xwEDyIBQNkBB9Vzqy7OqaL3pxf5adC3Fja8adlgosEv-CJSLec2hmj5WdGoqpAFIStTVcJML1EY-sd6zH8PzsMBHzM-w79cFk1W_EXVyO85MVgWZxSDoYibhOVewDHyHeXXJSoMPax4rDSPDkEddx2_tmjMGa-rFPSW3PEa68gX4FTp08sE21Fgr3VzIlH1ja8EhXQ6rZUztgCaiPR4_s8jRVBkPIpi865o00seJDg.dwDu5v2xGE-7HB76h1nN_8ZuKnDwTMtToeE-NkvwEBI&dib_tag=se&keywords=fireproof%2Bdocument%2Borganizer%2Bfolder&qid=1767765943&sprefix=fireproof%2Bdocument%2Borganizer%2Bfolder%2Caps%2C184&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=vegasmultum70-20&linkId=48cc5f5e1d9b8ef3333e91e7e5a96060&language=en_US&ref_=as_li_ss_tl"
-               target="_blank" rel="nofollow noopener">
-              View on Amazon <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </article>
+        <!-- PROD 4 -->
+        <article id="prod-4" data-category="protection" class="product-card bg-black/60 border border-red-900/20 rounded-2xl overflow-hidden">
+          <div class="p-5 flex gap-4">
+            <img src="assets/resources/prod_4.jpg" alt="Fireproof Document Bags" class="w-28 h-36 rounded-xl object-cover border border-white/10" />
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-bold bg-red-600/20 border border-red-600/40 px-2 py-1 rounded-lg text-red-200">Fireproof / Waterproof</span>
+                <span class="text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">Best for: go-bag</span>
+              </div>
 
-        <!-- 7 -->
-        <article class="bg-black/60 border border-red-900/20 rounded-xl p-5">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-lg font-bold text-white">ADIMO Home Safe Box (1.2 Cubic Feet) — Digital Keypad + Dual Key</h3>
-            <span class="shrink-0 text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">#7</span>
-          </div>
-          <p class="mt-2 text-sm text-gray-300">A compact safe for important documents and valuables.</p>
-          <div class="mt-4">
-            <a class="inline-flex items-center gap-2 text-sm font-semibold text-red-400 hover:text-red-300"
-               href="https://www.amazon.com/ADIMO-Model-35-Reinforced-Intelligent/dp/B09N364V92?crid=10A555P2MW2Y3&dib=eyJ2IjoiMSJ9.0409ZiJTFihSTFz58bSiHX-3rTp6nBWFgirHEcXd-Utu5ZiNr8LKr06xiiJAQ-t3lDS4IEFJldLN4Lnu6gwWPA4mta-hmMj7B5TzX5A0ygPo8Dmsbj2O3ncGC9WHWCQP1e47C7E3aNWu6ZrVgPbbztdJMzoaOxhvZ1RYp-bjvPOS0JdFg26QeqwX8wgPo4PUNZuaQbK52NexT6ncVww9pDhAD5EHR4mvbH7_cM0NJt-EUbonCEsHmM7w-pgpkgIOB1iWy8pXtpDaSSmFiV85pqlHUNeNN0LNL-e9iGUnXcI.sTpFWs4gaXzoHWxNRECd4QPfHXE03I45TQ3TLwG0wJA&dib_tag=se&keywords=fireproof%2Bsafe%2Bsmall%2Bhome&qid=1767766016&sprefix=fireproof%2Bsafe%2Bsmall%2Bhome%2Caps%2C226&sr=8-4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=vegasmultum70-20&linkId=b29702c9d8d3d45a2daa22efe59ea005&language=en_US&ref_=as_li_ss_tl"
-               target="_blank" rel="nofollow noopener">
-              View on Amazon <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </article>
+              <h3 class="mt-2 text-lg font-extrabold text-white">
+                4 Pack Fireproof Document Bags, Waterproof Document Pouch Holder with Zipper, Fire Proof Money Bag for Cash, Fireproof Envelope Fire Safe Bag, Fire Resistant Storage for Legal/A4 Size
+              </h3>
 
-        <!-- 8 -->
-        <article class="bg-black/60 border border-red-900/20 rounded-xl p-5">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-lg font-bold text-white">Amazon Basics 8-Sheet High Security Cross-Cut Shredder (P-4)</h3>
-            <span class="shrink-0 text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">#8</span>
-          </div>
-          <p class="mt-2 text-sm text-gray-300">Cross-cut shredding for sensitive paperwork and old cards.</p>
-          <div class="mt-4">
-            <a class="inline-flex items-center gap-2 text-sm font-semibold text-red-400 hover:text-red-300"
-               href="https://www.amazon.com/Amazon-Basics-8-Sheet-Cross-Cut-Shredder/dp/B0C6LZ8S34?crid=2L0KJ0PNNJ8ER&dib=eyJ2IjoiMSJ9.nj0Wnyeh1dlneSuIBKO31UbFnB1H1aShDbBPVeidliW_I7PuYaM0_Gx9-IuX1Yd5y4S-2cOI0APD8kXkHoMa0otdMgyZ5UDvGGNrLt9DZqoUKvgvlA86DsE5TB9QGPiNKsBurA6RoDZPwo3aUR4OvY2pOLFgnWvJuKrqEeo_o2WEKUNazIUPkO4NK4SoHK4zNRszRJ3KN5EDKx_JlPCoNzOaw7d9remeWmVNpwAyJtc.X1_GctivbTYELv_IBIBnU_6cTcbbtGreDU9uqKWp-JU&dib_tag=se&keywords=cross%2Bcut%2Bpaper%2Bshredder%2Bhome&qid=1767766071&sprefix=cross%2Bcut%2Bpaper%2Bshredder%2Bhome%2Caps%2C319&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=vegasmultum70-20&linkId=bc5c54e02e3660bf5b71357c927301f1&language=en_US&ref_=as_li_ss_tl"
-               target="_blank" rel="nofollow noopener">
-              View on Amazon <span aria-hidden="true">↗</span>
-            </a>
+              <div class="mt-2 text-sm text-gray-300">
+                <div class="line-clamp-6" data-fulltext>
+                  Color	Black
+                  Material	high quality non-itchy silicone coated fiberglass
+                  Style	Modern
+                  Brand	andyer
+                  Sheet Size	a4
+                  About this item
+                  4 DIFFERENT SIZES FOR DIFFERENT NEEDS - Keep all your important documents in one safe place and stay organized. Andyer 4-piece fireproof bag set includes: legal-size fireproof document bag(15''x11'')*1, A4/letter-size fire proof bag for documents (12.7''x9.8'')*1, fireproof envelope bag for certificate (10''x7.8'')*1, and small fireproof money bag for cash / passport (8''x5'')*1
+                  BUILT FOR REAL EMERGENCIES - This fireproof waterproof document bag ensures that your and your family's important documents are safe, even in the event of an unforeseen emergency. Andyer fire safe bag has passed the Global Flammability Standard and Vertical Flame Test (SGS UL94 V-1). Don't settle for a water and fire proof document bag that could jeopardize your important documents
+                  SUPERIOR WATER RESISTANCE - With professional water-resistant coating, zippers, Velcro flap seals, and seamless one-piece construction, this bag effectively protects your documents from leaks, rain, and emergency sprinkler systems. Ideal for home, office, travel, and emergency preparedness
+                  HIGH-VIZ FOR FAST EVACUATION - With the night-reflective strip design, you can instantly locate your fireproof cash and document bags even in darkness. Time is life in a fire; our goal is to help you quickly find your essentials and evacuate safely during critical moments
+                  EASY TO STORE, LIGHTWEIGHT & FOLDABLE - Easy to grab and go, or just store in your fireproof safes, drawers or go-bags for peace of mind. Designed to protect all your valuables, passports, legal documents, contracts, certificates, cash, jewelry and other valuables. Ideal gift for your friends, family and clients
+                </div>
+              </div>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <a href="https://www.amazon.com/Fireproof-Document-Waterproof-Envelope-Resistant/dp/B0FDWC8G75?crid=35OY9V1R5ZUWW&dib=eyJ2IjoiMSJ9.RQNDQdcUN-iciH5FB4RDFFDu3F_NmChAOl5qrUtbEMoHfG_RE_1riZbXit76DAy-2xwEDyIBQNkBB9Vzqy7OqaL3pxf5adC3Fja8adlgosEv-CJSLec2hmj5WdGoqpAFIStTVcJML1EY-sd6zH8PzsMBHzM-w79cFk1W_EXVyO85MVgWZxSDoYibhOVewDHyHeXXJSoMPax4rDSPDkEddx2_tmjMGa-rFPSW3PEa68gX4FTp08sE21Fgr3VzIlH1ja8EhXQ6rZUztgCaiPR4_s8jRVBkPIpi865o00seJDg.dwDu5v2xGE-7HB76h1nN_8ZuKnDwTMtToeE-NkvwEBI&dib_tag=se&keywords=fireproof%2Bdocument%2Borganizer%2Bfolder&qid=1767765943&sprefix=fireproof%2Bdocument%2Borganizer%2Bfolder%2Caps%2C184&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=vegasmultum70-20&linkId=2da77fdb3bb9d79a9c4423f3d57e648a&language=en_US&ref_=as_li_ss_tl"
+                   target="_blank" rel="nofollow noopener"
+                   class="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-semibold text-sm transition">
+                  View on Amazon <span aria-hidden="true">↗</span>
+                </a>
+                <button class="toggle-desc px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 text-sm font-semibold transition">
+                  Expand description
+                </button>
+              </div>
+
+              <p class="mt-3 text-xs text-gray-400">
+                Affiliate link. Price may change on Amazon.
+              </p>
+            </div>
           </div>
         </article>
       </div>
@@ -282,77 +473,102 @@
   </section>
 
   <!-- ========================= -->
-  <!-- DOCUMENTATION (4)         -->
+  <!-- STORAGE (2)               -->
   <!-- ========================= -->
-  <section id="documentation" class="px-4 py-10">
+  <section id="storage" class="px-4 py-10">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-2xl font-extrabold text-white">Documentation & Storage</h2>
-      <p class="mt-2 text-gray-300 max-w-3xl">
-        Backups and organization tools for keeping records, receipts, scans, and case paperwork in one place.
-      </p>
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-extrabold text-white">Backups & Storage</h2>
+          <p class="mt-2 text-gray-300 max-w-3xl">
+            Keep copies of scans, receipts, and case paperwork. Redundancy beats regret.
+          </p>
+        </div>
+        <span class="text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">2 items</span>
+      </div>
 
-      <div class="mt-6 grid md:grid-cols-2 gap-4">
-        <!-- 9 -->
-        <article class="bg-black/60 border border-red-900/20 rounded-xl p-5">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-lg font-bold text-white">Kepmem Flash Drive 64GB (Pack of 10)</h3>
-            <span class="shrink-0 text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">#9</span>
-          </div>
-          <p class="mt-2 text-sm text-gray-300">Multipack drives for basic file backups and document copies.</p>
-          <div class="mt-4">
-            <a class="inline-flex items-center gap-2 text-sm font-semibold text-red-400 hover:text-red-300"
-               href="https://www.amazon.com/Kepmem-Portable-Colorful-Multipack-Storage/dp/B09D3QK71Y?crid=2ZUMRW6X8RGNQ&dib=eyJ2IjoiMSJ9.srzut7jdVKCZyQjgHoYGULIkl9kfYHZwH5R_qvyrzzYp3fdA6TXl_cLVEMsn34PLbOKVkBDtJDjZvaknPe8Cv9oMnoIfMpZ7lMfR0YsRjPMD1NkzzaStcZ6-ugwF0ZGMtZt5eU_CbwSNxdONgzgaMBb_NgZe_7BSD2EpgMXsJoPgTkK8dTiMVevcIYZJVxO8_ZvS6tDDqSInj6kmztN7Jo2PGt8AOTrykKLEtgIO0JI.hHD2K3bxAIuojDDeWQGFoXU7DnkMA4xXFtxL4LTdDXI&dib_tag=se&keywords=USB+flash+drive+2+pack+64GB&qid=1767766187&sprefix=usb+flash+drive+2+pack+64gb%2Caps%2C478&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll1&tag=vegasmultum70-20&linkId=9d235dd26a2d8c2ba8c6bbb44f43a173&language=en_US&ref_=as_li_ss_tl"
-               target="_blank" rel="nofollow noopener">
-              View on Amazon <span aria-hidden="true">↗</span>
-            </a>
+      <div class="mt-6 grid lg:grid-cols-2 gap-4">
+        <!-- PROD 5 -->
+        <article id="prod-5" data-category="storage" class="product-card bg-black/60 border border-red-900/20 rounded-2xl overflow-hidden">
+          <div class="p-5 flex gap-4">
+            <img src="assets/resources/prod_5.jpg" alt="Kepmem Flash Drive 64GB Pack of 10" class="w-28 h-36 rounded-xl object-cover border border-white/10" />
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-bold bg-red-600/20 border border-red-600/40 px-2 py-1 rounded-lg text-red-200">Redundant backups</span>
+                <span class="text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">Best for: document copies</span>
+              </div>
+
+              <h3 class="mt-2 text-lg font-extrabold text-white">
+                Kepmem Flash Drive 64GB Pack of 10 Thumb Drives Bulk 64 Giga USB Drives Value Metal USB 2.0 Memory Sticks Swivel Pen Drive 64 GB Portable Jump Drive Colorful Multipack Zip Drives for Data Storage
+              </h3>
+
+              <div class="mt-2 text-sm text-gray-300">
+                <div class="line-clamp-6" data-fulltext>
+                  Brand	Kepmem
+                  Memory Storage Capacity	64 GB
+                  Hardware Interface	USB 2.0
+                  Special Feature	【10 pieces lanyards】, 【360° swivel aluminum cover】, 【LED Indicator , No need to install any software】, 【Reading Speed: 10-15MB/S , Writing Speed: 5-8MB/S】, 【USB 2.0 , backwards USB 1.1】【10 pieces lanyards】, 【360° swivel aluminum cover】, 【LED Indicator , No need to install any software】, 【Reading Speed: 10-15MB/S , Writing Speed: 5-8MB/S… See more
+                  Write Speed	5-8
+                  About this item
+                  10pack 64 GB: Including 10 pack mixed colors USB 2.0 thumb drives 64gb. With 10 pieces lanyards so the usb drive can be carried conveniently. With LED indicator, light flashes when uploading / downloading files to it, transfer status at a glance
+                  Reliable universal: Swivel 64 GB flash drive support Windows 7/8/10/11/12/Vista/XP/Unix/2000/98/ME/NT Linux/Mac OS, etc. Compatible with USB 2.0. Reading speed is 15MB/s, writing speed is 8MB/s, to ensure high-speed data transmission
+                  Plug and play: No need to install any software. Memory stick can be used in computer, TV, speaker, notebook, car audio and others. Suitable for storing, transferring and sharing digital data for work, school, business, daily usage or traveling
+                  Aluminum cover: Pen drive with 360° swivel aluminum cover to protect USB connector. The end of the jump drives with eyelet hole that can easily be attached in your key chain, backpack, lanyard. Safety and easy carrying, take your data anywhere
+                  Application: Brand the flash drive with your company's name and provide company's overview, policies, etc. to the newly joined employees or your customers. Popular as Teacher's day/Wedding/Graduation/Company Meeting/Exhibition gift
+                </div>
+              </div>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <a href="https://www.amazon.com/Kepmem-Portable-Colorful-Multipack-Storage/dp/B09D3QK71Y?crid=2ZUMRW6X8RGNQ&dib=eyJ2IjoiMSJ9.srzut7jdVKCZyQjgHoYGULIkl9kfYHZwH5R_qvyrzzYp3fdA6TXl_cLVEMsn34PLbOKVkBDtJDjZvaknPe8Cv9oMnoIfMpZ7lMfR0YsRjPMD1NkzzaStcZ6-ugwF0ZGMtZt5eU_CbwSNxdONgzgaMBb_NgZe_7BSD2EpgMXsJoPgTkK8dTiMVevcIYZJVxO8_ZvS6tDDqSInj6kmztN7Jo2PGt8AOTrykKLEtgIO0JI.hHD2K3bxAIuojDDeWQGFoXU7DnkMA4xXFtxL4LTdDXI&dib_tag=se&keywords=USB+flash+drive+2+pack+64GB&qid=1767766187&sprefix=usb+flash+drive+2+pack+64gb%2Caps%2C478&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=vegasmultum70-20&linkId=62605775fa7e1b054623976cb3f453cc&language=en_US&ref_=as_li_ss_tl"
+                   target="_blank" rel="nofollow noopener"
+                   class="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-semibold text-sm transition">
+                  View on Amazon <span aria-hidden="true">↗</span>
+                </a>
+                <button class="toggle-desc px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 text-sm font-semibold transition">
+                  Expand description
+                </button>
+              </div>
+
+              <p class="mt-3 text-xs text-gray-400">
+                Affiliate link. Price may change on Amazon.
+              </p>
+            </div>
           </div>
         </article>
 
-        <!-- 10 -->
-        <article class="bg-black/60 border border-red-900/20 rounded-xl p-5">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-lg font-bold text-white">1TB Portable SSD (Up to 2100MB/s) — USB 3.2, USB-C & A</h3>
-            <span class="shrink-0 text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">#10</span>
-          </div>
-          <p class="mt-2 text-sm text-gray-300">Fast storage for long-term backups and big files (video, scans, archives).</p>
-          <div class="mt-4">
-            <a class="inline-flex items-center gap-2 text-sm font-semibold text-red-400 hover:text-red-300"
-               href="https://www.amazon.com/OSCOO-Portable-External-Retractable-Compatible/dp/B0DXQ594YL?crid=2A61GX93VLSLC&dib=eyJ2IjoiMSJ9.KO-eWXJY9v0-zYlMMZvRH-rQUm8vAFJ4k36brGvw9gw2uCG0BOJM-zYogx-4pMlIWbLABx1VQHVKc5DHk3LwiL10GPyKT3smtwL9I38NX5XePv6GMJQ7lpx3vz9qFan3lwnImuWBCqB3yAQhKQoM9d9GGe1Pu2KiIBRTrMPyy12SmzS83y24M0gQhRZ29nP8Rx-yl6BjRqFDYthqn4FZfTz2y-M5ZJHZ1-0ifqQG5eE.Vj_QxyeEgeARsp8hzc3-32HRu-pgSgECXZ772_0T8F0&dib_tag=se&keywords=external%2Bhard%2Bdrive%2B1TB&qid=1767766242&sprefix=external%2Bhard%2Bdrive%2B1tb%2Caps%2C244&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=vegasmultum70-20&linkId=eff26f433d63cfc008593cdfbb98389d&language=en_US&ref_=as_li_ss_tl"
-               target="_blank" rel="nofollow noopener">
-              View on Amazon <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </article>
+        <!-- PROD 6 -->
+        <article id="prod-6" data-category="storage" class="product-card bg-black/60 border border-red-900/20 rounded-2xl overflow-hidden">
+          <div class="p-5 flex gap-4">
+            <img src="assets/resources/prod_6.jpg" alt="1TB Portable SSD" class="w-28 h-36 rounded-xl object-cover border border-white/10" />
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-bold bg-red-600/20 border border-red-600/40 px-2 py-1 rounded-lg text-red-200">Fast storage</span>
+                <span class="text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">Best for: big archives</span>
+              </div>
 
-        <!-- 11 -->
-        <article class="bg-black/60 border border-red-900/20 rounded-xl p-5">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-lg font-bold text-white">HP PS150 Portable Document Scanner</h3>
-            <span class="shrink-0 text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">#11</span>
-          </div>
-          <p class="mt-2 text-sm text-gray-300">Digitize paperwork into searchable files and keep a clean record trail.</p>
-          <div class="mt-4">
-            <a class="inline-flex items-center gap-2 text-sm font-semibold text-red-400 hover:text-red-300"
-               href="https://www.amazon.com/HP-Portable-Document-Rechargeable-Compatible/dp/B0F3F5BGJN?crid=23O1NXSFYPEKW&dib=eyJ2IjoiMSJ9.zW2cSTxwTCPT7jxYCnmTJvRx5AL7_fmG-b2BYTSGuHgnY1mcbEhHExLDS5apGk5OW5rh5RYoU9bsNnrbHLcGOxTs3NxAKj3iQOWojkDG3ZtTMHvH49_SLfUjeusjEswNVodY_7mPnCG2v7sRzTPRVcTuwN-0UL0HTm2kijAsGQ_Uzz-wTg_Hry3UGGPsfAF1RWUlddILQAEpvxMVHnPvIEHenPLuq-IGnV6ykHAz9_g.jMZQMWxDd_Kokb99ikuStfiapCyTK69v_TE3EWjAoSI&dib_tag=se&keywords=portable+document+scanner&qid=1767766300&sprefix=portable+document+scanner%2Caps%2C226&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll1&tag=vegasmultum70-20&linkId=34f48cbb4c558d059d364eb8b276026a&language=en_US&ref_=as_li_ss_tl"
-               target="_blank" rel="nofollow noopener">
-              View on Amazon <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </article>
+              <h3 class="mt-2 text-lg font-extrabold text-white">
+                1TB Portable SSD, Up to 2100MB/s, Supports Apple 4K 60fps ProRes, External Hard Drive USB 3.2 with USB-C & A for iPhone 15/16/17, Android, Mac & PC, Ideal for Photographers & Content Creators
+              </h3>
 
-        <!-- 12 -->
-        <article class="bg-black/60 border border-red-900/20 rounded-xl p-5">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-lg font-bold text-white">TRANBO Expandable File Folder (Legal Size / 12 Pockets)</h3>
-            <span class="shrink-0 text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">#12</span>
-          </div>
-          <p class="mt-2 text-sm text-gray-300">A physical filing system to keep categories separated and easy to access.</p>
-          <div class="mt-4">
-            <a class="inline-flex items-center gap-2 text-sm font-semibold text-red-400 hover:text-red-300"
-               href="https://www.amazon.com/Pockets-Accordion-File-Organizer-TRANBO/dp/B0C497CM14?crid=1QCPORUIU4UW8&dib=eyJ2IjoiMSJ9.fyLHPzkYuut0_xdoEB7eLxcRbvLNbbkyrB_34DcF03mxMZi6lm5ipyX3LEiGIdPLD1yAb29RCjeSiM9ITfw5s__ZFhDFwRCUQxL-ipzG_VBevEerZ_BW79BNqIh5nDcIpGIYCAvVPY0KbO8ZknTlbh5XFTV_AzYIHuuCuwYQMNma2rE2ncZOcLg4KlpJe2x8vzQCt2DlIei9YL-ZTD9NQelk6cmqN2l7m4-1OWlLvNPRUIzs-vWpn1QhYp3BBtTRaKef8PzWkIHoKTTM7phGA712NDQDFFPRNtAHTaubVJY.1Fjzlzmvu3ckr379kE6G62a11eZdmwN8xr2x5A4Us9U&dib_tag=se&keywords=expandable%2Bfile%2Bfolder%2Blegal%2Bsize&qid=1767766352&sprefix=expandable%2Bfile%2Bfolder%2Blegal%2Bsize%2Caps%2C239&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=vegasmultum70-20&linkId=8453da8a1002f56d9ec8190c19305c47&language=en_US&ref_=as_li_ss_tl"
-               target="_blank" rel="nofollow noopener">
-              View on Amazon <span aria-hidden="true">↗</span>
-            </a>
+              <div class="mt-2 text-sm text-gray-300">
+                <!-- No detailed description provided beyond title; keep it clean (conversion > filler) -->
+                <p class="text-gray-300">
+                  High-speed external storage for large files, long-term backups, and document/video archives.
+                </p>
+              </div>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <a href="https://www.amazon.com/OSCOO-Portable-External-Retractable-Compatible/dp/B0DXQ594YL?crid=2A61GX93VLSLC&dib=eyJ2IjoiMSJ9.KO-eWXJY9v0-zYlMMZvRH-rQUm8vAFJ4k36brGvw9gw2uCG0BOJM-zYogx-4pMlIWbLABx1VQHVKc5DHk3LwiL10GPyKT3smtwL9I38NX5XePv6GMJQ7lpx3vz9qFan3lwnImuWBCqB3yAQhKQoM9d9GGe1Pu2KiIBRTrMPyy12SmzS83y24M0gQhRZ29nP8Rx-yl6BjRqFDYthqn4FZfTz2y-M5ZJHZ1-0ifqQG5eE.Vj_QxyeEgeARsp8hzc3-32HRu-pgSgECXZ772_0T8F0&dib_tag=se&keywords=external%2Bhard%2Bdrive%2B1TB&qid=1767766242&sprefix=external%2Bhard%2Bdrive%2B1tb%2Caps%2C244&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=vegasmultum70-20&linkId=82ff77a2071c4229f1cd02130b3c15d0&language=en_US&ref_=as_li_ss_tl"
+                   target="_blank" rel="nofollow noopener"
+                   class="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-semibold text-sm transition">
+                  View on Amazon <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+
+              <p class="mt-3 text-xs text-gray-400">
+                Affiliate link. Price may change on Amazon.
+              </p>
+            </div>
           </div>
         </article>
       </div>
@@ -360,104 +576,133 @@
   </section>
 
   <!-- ========================= -->
-  <!-- ORGANIZATION (2)          -->
+  <!-- MONEY (2)                 -->
   <!-- ========================= -->
-  <section id="organization" class="px-4 py-10">
+  <section id="money" class="px-4 py-10">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-2xl font-extrabold text-white">Budgeting & Tracking</h2>
-      <p class="mt-2 text-gray-300 max-w-3xl">
-        The point is visibility. If you can’t see your money clearly, someone else can “move it” without you noticing fast enough.
-      </p>
-
-      <div class="mt-6 grid md:grid-cols-2 gap-4">
-        <!-- 13 -->
-        <article class="bg-black/60 border border-red-900/20 rounded-xl p-5">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-lg font-bold text-white">Clever Fox Budget Planner — Expense Tracker Notebook (A5)</h3>
-            <span class="shrink-0 text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">#13</span>
-          </div>
-          <p class="mt-2 text-sm text-gray-300">Monthly budgeting organizer for categories, bills, and spending visibility.</p>
-          <div class="mt-4">
-            <a class="inline-flex items-center gap-2 text-sm font-semibold text-red-400 hover:text-red-300"
-               href="https://www.amazon.com/Clever-Fox-Budget-Planner-Notebook/dp/B07VPGYDZJ?crid=J5FN10O3QT0Y&dib=eyJ2IjoiMSJ9.Lq2A_4ryr4tlm0al2_wWMB6DATR830SRQ7Lg3nJJ9X7TBKXY9_ZUSlIs23Vv9-F7JDseWhs37tdRONE_jqFnr4Us_2uK893kbJhIHEv8AUpQK87448sLexvS4mB4AkoGR2pzikXKr1Zxt0JrE-t1O7QIa9kpRRAiz_bkLrW71O9dsy053-qP_KlZPF23Y3ecBEbsfCjBtURG8YH9YC8JjQVIHW-X4VZpNmK8Wsa8o9AMlTi9AXMU2WJdnTb_HZApphqI2Z9SdfCFI1dtOJzWwr8zV4j7YnXyrWYxPOikjkY.su7HamLlMgb4TazSarOd44kXFpyQHFrsNyp1-GnD7UI&dib_tag=se&keywords=undated%2Bbudget%2Bplanner&qid=1767766410&sprefix=undated%2Bbudget%2Bplanner%2Caps%2C254&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=vegasmultum70-20&linkId=11c29f3b1e7e1e2b9dfde5ac24cf98fa&language=en_US&ref_=as_li_ss_tl"
-               target="_blank" rel="nofollow noopener">
-              View on Amazon <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- 14 -->
-        <article class="bg-black/60 border border-red-900/20 rounded-xl p-5">
-          <div class="flex items-start justify-between gap-3">
-            <h3 class="text-lg font-bold text-white">Clever Fox Income & Expense Tracker — Ledger Book (1-Year)</h3>
-            <span class="shrink-0 text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">#14</span>
-          </div>
-          <p class="mt-2 text-sm text-gray-300">Bookkeeping-style ledger for a clean paper trail of income and expenses.</p>
-          <div class="mt-4">
-            <a class="inline-flex items-center gap-2 text-sm font-semibold text-red-400 hover:text-red-300"
-               href="https://www.amazon.com/Clever-Fox-Income-Expense-Tracker/dp/B08LZMBN3N?crid=1IH02YJV881CI&dib=eyJ2IjoiMSJ9.soISUryP7nVGb9AqOGgiaihZvkZd-NxHeKZ37mVyLHWs-vU3bHFw5o5J3fYzGudFfCrFmU7Cvzzz2vHt9ynftqlp0yOhvoVpREf9H3HBQU5gU_QNgbfnwIVn1zEZBOHMHPToNFtAZkDzfoUL6E03PF369lGBZNJ_5mm5420Za95pfW-qOJ1pVIQvs65eCuhOBjyITRb5lneXIxUTxVHgELdzL0E-lKxk8jgESqIvKYIr7w0_fUE7C6b8bw-KiNmFQzzCl3hpXl0s9GqlBEdx-Q9t3rmlvyK4BVN3JC_5i5Q.AQ3njP8mrPbkLk9VQTMjGaGg9zjIHKLePLR9-03Ss3E&dib_tag=se&keywords=expense%2Btracker%2Bnotebook&qid=1767766478&sprefix=expense%2Btracker%2Bnotebook%2Caps%2C339&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=vegasmultum70-20&linkId=b09cb6025040f334aa10cb2488928384&language=en_US&ref_=as_li_ss_tl"
-               target="_blank" rel="nofollow noopener">
-              View on Amazon <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </article>
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-extrabold text-white">Budgeting & Tracking</h2>
+          <p class="mt-2 text-gray-300 max-w-3xl">
+            The point is visibility. If you can’t see your money clearly, someone else can “move it” without you noticing fast enough.
+          </p>
+        </div>
+        <span class="text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">2 items</span>
       </div>
 
-      <!-- ALL LINKS LIST (so you can visually confirm every link exists on-page) -->
-      <div class="mt-10 bg-black/60 border border-red-900/20 rounded-xl p-5">
-        <h3 class="text-lg font-bold text-white">All Resource Links (14)</h3>
-        <p class="mt-2 text-sm text-gray-300">
-          If you ever think a link “didn’t show,” this list makes it impossible to miss.
-        </p>
+      <div class="mt-6 grid lg:grid-cols-2 gap-4">
+        <!-- PROD 7 -->
+        <article id="prod-7" data-category="money" class="product-card bg-black/60 border border-red-900/20 rounded-2xl overflow-hidden">
+          <div class="p-5 flex gap-4">
+            <img src="assets/resources/prod_7.jpg" alt="Clever Fox Budget Planner" class="w-28 h-36 rounded-xl object-cover border border-white/10" />
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-bold bg-red-600/20 border border-red-600/40 px-2 py-1 rounded-lg text-red-200">Monthly budget system</span>
+                <span class="text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">Best for: beginners</span>
+              </div>
 
-        <ol class="mt-4 space-y-2 text-sm text-gray-200 list-decimal list-inside">
-          <li><a class="text-red-400 hover:text-red-300" target="_blank" rel="nofollow noopener"
-            href="https://www.amazon.com/OFFENSIVE-INTELLIGENCE-techniques-everything-elsewhere/dp/B0C7FHL7TT?crid=2ZN36WM70SR3M&dib=eyJ2IjoiMSJ9.S1D42BTLhh75AoNUctrdye9jIeaqMPHT971gJQ8_CRs.PJYIsh6lNa8gsJZ76vTxSf7gTHbFc35RIC7k2dJoqb4&dib_tag=se&keywords=financial+fraud+investigative+journalism+book&qid=1767765498&sprefix=financial+fraud+investigative+journalism+book%2Caps%2C300&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9idGY&psc=1&linkCode=ll1&tag=vegasmultum70-20&linkId=415a0f7b92be2ec9f0fb0448de889363&language=en_US&ref_=as_li_ss_tl">OFFENSIVE INTELLIGENCE</a></li>
+              <h3 class="mt-2 text-lg font-extrabold text-white">
+                Clever Fox Budget Planner - Expense Tracker Notebook. Monthly Budgeting Organizer, Finance Logbook & Accounts Book, Bill Tracker, A5 (Brown)
+              </h3>
 
-          <li><a class="text-red-400 hover:text-red-300" target="_blank" rel="nofollow noopener"
-            href="https://www.amazon.com/Corruption-Government-2ed-Causes-Consequences/dp/1107441099?crid=2UP5689QYU67I&dib=eyJ2IjoiMSJ9.qsSVXUjUq-x0Tsx-wiKYZ-sPXrq9-Fe3Rx7pVWG0r503R1BvtqiTHhnR1vBXvIBLjlfrYVJ5X2AML4-jg6yRLXCtKS-q0MOSGzhFosrd_U-jC1h3LkWd0LNgHmvBggVj0hDcJFoufeUfPmSyH9cGLcF8IFO9HllqRsJbyqWt_agXVtuoe6nfqPkiq0p4ne7j7fM-KsYgEcNly5-2F_ILzUhJ-aG7Melym9HHV6hhZGU.jYNcnXl3NNosSEc4hLe43ZDD_P8Tc4yInknCNcwBE34&dib_tag=se&keywords=government+corruption+investigative+book&qid=1767765681&sprefix=government+corruption+investigative+book%2Caps%2C341&sr=8-2&linkCode=ll1&tag=vegasmultum70-20&linkId=92f780d2d0ef30a000800770ecce4efd&language=en_US&ref_=as_li_ss_tl">Corruption and Government (2nd Ed.)</a></li>
+              <div class="mt-2 text-sm text-gray-300">
+                <div class="line-clamp-6" data-fulltext>
+                  Brand	Clever Fox
+                  Color	Brown
+                  Cover Material	Leather
+                  Year	2022
+                  Format	Notebook, Organizer
+                  Calendar Type	Monthly
+                  Target Audience	Adult
+                  Sheet Size	A5
+                  Material	Paper
+                  Binding	Unknown Binding
+                  See more
+                  About this item
+                  TAKE CONTROL OF YOUR MONEY & ACHIEVE YOUR FINANCIAL GOALS - Are you looking for the best monthly budget planner to keep your finances organized? Clever Fox Budget Book will help you keep your money organized, spend well and start saving.
+                  FIND THE BEST WAY TO ACHIEVE YOUR FINANCIAL GOALS - This budget organizer is not just a tool; it's a framework for achieving your financial goals. The finance planner helps you develop a strategy and break your ambitious goals into manageable monthly tasks.
+                  EASILY CONTROL YOUR SPENDING, DEBTS & SAVINGS - This money planner is undated and covers 12 months. Every month features a calendar, a budget plan, and an expense tracker. The budgeting planner also includes 8 savings and 12 debt trackers.
+                  USER GUIDE & BUDGETING STICKERS - Measuring 5.8 by 8.3 inches, this bill planner features a vegan leather hardcover, thick 120gsm paper, pen loop, elastic band, 3 bookmarks, pocket for receipts, budgeting stickers, and a user guide.
+                  60-DAY GUARANTEE - We will exchange or refund your Budget Planner Organizer if you aren’t satisfied with your budgeting workbook for any reason. Reach out to us via message to refund your financial planner.
+                </div>
+              </div>
 
-          <li><a class="text-red-400 hover:text-red-300" target="_blank" rel="nofollow noopener"
-            href="https://www.amazon.com/Scam-Survival-Guide-2025-strategy/dp/B0G43W4N77?crid=105GFG20OHJTI&dib=eyJ2IjoiMSJ9.AMuaxve4bWwbVUSgDhmA-6FV_L1E0UN4Kqa4KS7VkuQ_agciXkO3tzDFmrnYIDtH6SG4fkzIqFeGPtgeIHV8cs11QBfzigTzLGdMWkdVpXp1FSUnunnqlLdRJbyJ6xMd6Gz9Blan8qe27p4TBarXbE0McwRNpAmEvfrc9m7LxUSwv88J2IxKVgucNmxptqmHfUltjl9-lok4red9hlok1ofz-eQByls6AYrtp2H9H3Lo.tKVjeE2orgdu_9rdkiGit19DJZC2urfHfolB4BwaSIw&dib_tag=se&keywords=consumer+scam+prevention+book&qid=1767765765&sprefix=consumer+scam+prevention+book%2Caps%2C245&sr=8-2&linkCode=ll1&tag=vegasmultum70-20&linkId=f780d7bdb53bbec03f5f69378be65c6f&language=en_US&ref_=as_li_ss_tl">The Scam Survival Guide 2025</a></li>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <a href="https://www.amazon.com/Clever-Fox-Budget-Planner-Notebook/dp/B07VPGYDZJ?crid=J5FN10O3QT0Y&dib=eyJ2IjoiMSJ9.Lq2A_4ryr4tlm0al2_wWMB6DATR830SRQ7Lg3nJJ9X7TBKXY9_ZUSlIs23Vv9-F7JDseWhs37tdRONE_jqFnr4Us_2uK893kbJhIHEv8AUpQK87448sLexvS4mB4AkoGR2pzikXKr1Zxt0JrE-t1O7QIa9kpRRAiz_bkLrW71O9dsy053-qP_KlZPF23Y3ecBEbsfCjBtURG8YH9YC8JjQVIHW-X4VZpNmK8Wsa8o9AMlTi9AXMU2WJdnTb_HZApphqI2Z9SdfCFI1dtOJzWwr8zV4j7YnXyrWYxPOikjkY.su7HamLlMgb4TazSarOd44kXFpyQHFrsNyp1-GnD7UI&dib_tag=se&keywords=undated%2Bbudget%2Bplanner&qid=1767766410&sprefix=undated%2Bbudget%2Bplanner%2Caps%2C254&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=vegasmultum70-20&linkId=7be9643ef967845a5d1ee500e70f0f95&language=en_US&ref_=as_li_ss_tl"
+                   target="_blank" rel="nofollow noopener"
+                   class="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-semibold text-sm transition">
+                  View on Amazon <span aria-hidden="true">↗</span>
+                </a>
+                <button class="toggle-desc px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 text-sm font-semibold transition">
+                  Expand description
+                </button>
+              </div>
 
-          <li><a class="text-red-400 hover:text-red-300" target="_blank" rel="nofollow noopener"
-            href="https://www.amazon.com/Infographic-Guide-Personal-Finance-Everything/dp/1507204663?crid=MURDPGTN3ZJP&dib=eyJ2IjoiMSJ9.1Biz9o5_whYWqBT7r99P2C6CsO1Ip56yhe33jGXLpiTVQ7JEB6iAVCcW_AXN6EZQ3CkFOYdi9SRT_-iFi0sTar62e45hRtDEWrQdwksJh6ApXmwkwtSboRUqLLK6wzUdIoxvYs5Hzhu6eF8emqdtbz4UXnwz21S5ht1-LftxGQrfFPR43QxF74ef3WU7K9qhtIVXxb0xDSETFUY_XxBaOLYFSLokDUKy0s_GkExth7A.JUR-dYKwpZn9FNC8kCcMNm8Sf1tkpe86XkRuJVPFHtQ&dib_tag=se&keywords=personal+finance+protection+book&qid=1767765817&sprefix=personal+finance+protection+book%2Caps%2C308&sr=8-1&linkCode=ll1&tag=vegasmultum70-20&linkId=46395f18c5c0ff2e544c6f015d34180f&language=en_US&ref_=as_li_ss_tl">Infographic Guide to Personal Finance</a></li>
+              <p class="mt-3 text-xs text-gray-400">
+                Affiliate link. Price may change on Amazon.
+              </p>
+            </div>
+          </div>
+        </article>
 
-          <li><a class="text-red-400 hover:text-red-300" target="_blank" rel="nofollow noopener"
-            href="https://www.amazon.com/gp/aw/d/B0CSWN363V?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=db44188367d7f9f5050d55b35d277a8e&hsa_cr_id=0&qid=1767765878&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=JHFP0&content-id=amzn1.sym.9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d%3Aamzn1.sym.9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d&pf_rd_p=9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d&pf_rd_r=PFX1HCX1301TRP60QYBA&pd_rd_wg=61ajX&pd_rd_r=8ed8e166-9abb-482e-8b7b-aea16c38104f&th=1&linkCode=ll1&tag=vegasmultum70-20&linkId=4b7818ba101fa634f9fd2aa497bcc574&language=en_US&ref_=as_li_ss_tl">Minimalist RFID Metal Wallet</a></li>
+        <!-- PROD 8 -->
+        <article id="prod-8" data-category="money" class="product-card bg-black/60 border border-red-900/20 rounded-2xl overflow-hidden">
+          <div class="p-5 flex gap-4">
+            <img src="assets/resources/prod_8.jpg" alt="Clever Fox Income & Expense Tracker" class="w-28 h-36 rounded-xl object-cover border border-white/10" />
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-bold bg-red-600/20 border border-red-600/40 px-2 py-1 rounded-lg text-red-200">Ledger / bookkeeping</span>
+                <span class="text-xs font-bold bg-white/5 border border-white/10 px-2 py-1 rounded-lg text-gray-300">Best for: small business</span>
+              </div>
 
-          <li><a class="text-red-400 hover:text-red-300" target="_blank" rel="nofollow noopener"
-            href="https://www.amazon.com/Fireproof-Document-Waterproof-Envelope-Resistant/dp/B0FDWC8G75?crid=35OY9V1R5ZUWW&dib=eyJ2IjoiMSJ9.RQNDQdcUN-iciH5FB4RDFFDu3F_NmChAOl5qrUtbEMoHfG_RE_1riZbXit76DAy-2xwEDyIBQNkBB9Vzqy7OqaL3pxf5adC3Fja8adlgosEv-CJSLec2hmj5WdGoqpAFIStTVcJML1EY-sd6zH8PzsMBHzM-w79cFk1W_EXVyO85MVgWZxSDoYibhOVewDHyHeXXJSoMPax4rDSPDkEddx2_tmjMGa-rFPSW3PEa68gX4FTp08sE21Fgr3VzIlH1ja8EhXQ6rZUztgCaiPR4_s8jRVBkPIpi865o00seJDg.dwDu5v2xGE-7HB76h1nN_8ZuKnDwTMtToeE-NkvwEBI&dib_tag=se&keywords=fireproof%2Bdocument%2Borganizer%2Bfolder&qid=1767765943&sprefix=fireproof%2Bdocument%2Borganizer%2Bfolder%2Caps%2C184&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=vegasmultum70-20&linkId=48cc5f5e1d9b8ef3333e91e7e5a96060&language=en_US&ref_=as_li_ss_tl">Fireproof Document Bags (4 Pack)</a></li>
+              <h3 class="mt-2 text-lg font-extrabold text-white">
+                Clever Fox Income & Expense Tracker – Accounting & Bookkeeping Ledger Book for Small Business – 1-Year Record Notebook, A5 (Black)
+              </h3>
 
-          <li><a class="text-red-400 hover:text-red-300" target="_blank" rel="nofollow noopener"
-            href="https://www.amazon.com/ADIMO-Model-35-Reinforced-Intelligent/dp/B09N364V92?crid=10A555P2MW2Y3&dib=eyJ2IjoiMSJ9.0409ZiJTFihSTFz58bSiHX-3rTp6nBWFgirHEcXd-Utu5ZiNr8LKr06xiiJAQ-t3lDS4IEFJldLN4Lnu6gwWPA4mta-hmMj7B5TzX5A0ygPo8Dmsbj2O3ncGC9WHWCQP1e47C7E3aNWu6ZrVgPbbztdJMzoaOxhvZ1RYp-bjvPOS0JdFg26QeqwX8wgPo4PUNZuaQbK52NexT6ncVww9pDhAD5EHR4mvbH7_cM0NJt-EUbonCEsHmM7w-pgpkgIOB1iWy8pXtpDaSSmFiV85pqlHUNeNN0LNL-e9iGUnXcI.sTpFWs4gaXzoHWxNRECd4QPfHXE03I45TQ3TLwG0wJA&dib_tag=se&keywords=fireproof%2Bsafe%2Bsmall%2Bhome&qid=1767766016&sprefix=fireproof%2Bsafe%2Bsmall%2Bhome%2Caps%2C226&sr=8-4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=vegasmultum70-20&linkId=b29702c9d8d3d45a2daa22efe59ea005&language=en_US&ref_=as_li_ss_tl">ADIMO Home Safe Box</a></li>
+              <div class="mt-2 text-sm text-gray-300">
+                <div class="line-clamp-6" data-fulltext>
+                  Brand	Clever Fox
+                  Color	Black
+                  Theme	Book
+                  Sheet Size	A5
+                  Pages	113
+                  Cover Material	Faux Leather
+                  Style	Modern
+                  Ruling Type	Squared
+                  Special Feature	Bookmark, Hard Cover
+                  Product Dimensions	8.43"L x 6.02"W x 0.67"Th
+                  See more
+                  About this item
+                  PERFECT LEDGER BOOK FOR SMALL BUSINESSES: This accounting ledger book for small businesses will help you organize finances, sort and summarize transactions, create balance summaries and set you up for financial success.
+                  SWITCH TO EFFICIENT & STRESS-FREE ACCOUNTING: This accounting book is undated and lasts a whole year and has 113 pages, including 53 weekly views, an annual summary, empty note pages, and, at the back, a spacious pocket for receipts.
+                  TAKE CONTROL OF YOUR FINANCES & SUCCEED: With this detailed record of all transactions and totals, you will be able to easily analyze your finances and quickly prepare accurate financial statements.
+                  COMPACT A5 FORMAT & DURABLE DESIGN: This bookkeeping record book comes in A5 format (5.8 by 8.3 inches) and has an eco-leather hardcover, 120gsm no-bleed paper, elastic, pen loop, bookmark, pocket for notes, and a user guide.
+                  60-DAY MONEY-BACK GUARANTEE: We will exchange or refund your receipt book for small business if you aren’t satisfied with your expense tracker notebook for any reason. Reach out to us via message to refund your small business supplies.
+                </div>
+              </div>
 
-          <li><a class="text-red-400 hover:text-red-300" target="_blank" rel="nofollow noopener"
-            href="https://www.amazon.com/Amazon-Basics-8-Sheet-Cross-Cut-Shredder/dp/B0C6LZ8S34?crid=2L0KJ0PNNJ8ER&dib=eyJ2IjoiMSJ9.nj0Wnyeh1dlneSuIBKO31UbFnB1H1aShDbBPVeidliW_I7PuYaM0_Gx9-IuX1Yd5y4S-2cOI0APD8kXkHoMa0otdMgyZ5UDvGGNrLt9DZqoUKvgvlA86DsE5TB9QGPiNKsBurA6RoDZPwo3aUR4OvY2pOLFgnWvJuKrqEeo_o2WEKUNazIUPkO4NK4SoHK4zNRszRJ3KN5EDKx_JlPCoNzOaw7d9remeWmVNpwAyJtc.X1_GctivbTYELv_IBIBnU_6cTcbbtGreDU9uqKWp-JU&dib_tag=se&keywords=cross%2Bcut%2Bpaper%2Bshredder%2Bhome&qid=1767766071&sprefix=cross%2Bcut%2Bpaper%2Bshredder%2Bhome%2Caps%2C319&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=vegasmultum70-20&linkId=bc5c54e02e3660bf5b71357c927301f1&language=en_US&ref_=as_li_ss_tl">Amazon Basics Cross-Cut Shredder</a></li>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <a href="https://www.amazon.com/Clever-Fox-Income-Expense-Tracker/dp/B08LZMBN3N?crid=1IH02YJV881CI&dib=eyJ2IjoiMSJ9.soISUryr4tlm0al2_wWMB6DATR830SRQ7Lg3nJJ9X7TBKXY9_ZUSlIs23Vv9-F7JDseWhs37tdRONE_jqFnr4Us_2uK893kbJhIHEv8AUpQK87448sLexvS4mB4AkoGR2pzikXKr1Zxt0JrE-t1O7QIa9kpRRAiz_bkLrW71O9dsy053-qP_KlZPF23Y3ecBEbsfCjBtURG8YH9YC8JjQVIHW-X4VZpNmK8Wsa8o9AMlTi9AXMU2WJdnTb_HZApphqI2Z9SdfCFI1dtOJzWwr8zV4j7YnXyrWYxPOikjkY.su7HamLlMgb4TazSarOd44kXFpyQHFrsNyp1-GnD7UI&dib_tag=se&keywords=expense%2Btracker%2Bnotebook&qid=1767766478&sprefix=expense%2Btracker%2Bnotebook%2Caps%2C339&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=vegasmultum70-20&linkId=cdeb0f0cb05fe9da47df6fe1538f345a&language=en_US&ref_=as_li_ss_tl"
+                   target="_blank" rel="nofollow noopener"
+                   class="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-semibold text-sm transition">
+                  View on Amazon <span aria-hidden="true">↗</span>
+                </a>
+                <button class="toggle-desc px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 text-sm font-semibold transition">
+                  Expand description
+                </button>
+              </div>
 
-          <li><a class="text-red-400 hover:text-red-300" target="_blank" rel="nofollow noopener"
-            href="https://www.amazon.com/Kepmem-Portable-Colorful-Multipack-Storage/dp/B09D3QK71Y?crid=2ZUMRW6X8RGNQ&dib=eyJ2IjoiMSJ9.srzut7jdVKCZyQjgHoYGULIkl9kfYHZwH5R_qvyrzzYp3fdA6TXl_cLVEMsn34PLbOKVkBDtJDjZvaknPe8Cv9oMnoIfMpZ7lMfR0YsRjPMD1NkzzaStcZ6-ugwF0ZGMtZt5eU_CbwSNxdONgzgaMBb_NgZe_7BSD2EpgMXsJoPgTkK8dTiMVevcIYZJVxO8_ZvS6tDDqSInj6kmztN7Jo2PGt8AOTrykKLEtgIO0JI.hHD2K3bxAIuojDDeWQGFoXU7DnkMA4xXFtxL4LTdDXI&dib_tag=se&keywords=USB+flash+drive+2+pack+64GB&qid=1767766187&sprefix=usb+flash+drive+2+pack+64gb%2Caps%2C478&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll1&tag=vegasmultum70-20&linkId=9d235dd26a2d8c2ba8c6bbb44f43a173&language=en_US&ref_=as_li_ss_tl">Kepmem Flash Drives (10-pack)</a></li>
-
-          <li><a class="text-red-400 hover:text-red-300" target="_blank" rel="nofollow noopener"
-            href="https://www.amazon.com/OSCOO-Portable-External-Retractable-Compatible/dp/B0DXQ594YL?crid=2A61GX93VLSLC&dib=eyJ2IjoiMSJ9.KO-eWXJY9v0-zYlMMZvRH-rQUm8vAFJ4k36brGvw9gw2uCG0BOJM-zYogx-4pMlIWbLABx1VQHVKc5DHk3LwiL10GPyKT3smtwL9I38NX5XePv6GMJQ7lpx3vz9qFan3lwnImuWBCqB3yAQhKQoM9d9GGe1Pu2KiIBRTrMPyy12SmzS83y24M0gQhRZ29nP8Rx-yl6BjRqFDYthqn4FZfTz2y-M5ZJHZ1-0ifqQG5eE.Vj_QxyeEgeARsp8hzc3-32HRu-pgSgECXZ772_0T8F0&dib_tag=se&keywords=external%2Bhard%2Bdrive%2B1TB&qid=1767766242&sprefix=external%2Bhard%2Bdrive%2B1tb%2Caps%2C244&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=vegasmultum70-20&linkId=eff26f433d63cfc008593cdfbb98389d&language=en_US&ref_=as_li_ss_tl">1TB Portable SSD</a></li>
-
-          <li><a class="text-red-400 hover:text-red-300" target="_blank" rel="nofollow noopener"
-            href="https://www.amazon.com/HP-Portable-Document-Rechargeable-Compatible/dp/B0F3F5BGJN?crid=23O1NXSFYPEKW&dib=eyJ2IjoiMSJ9.zW2cSTxwTCPT7jxYCnmTJvRx5AL7_fmG-b2BYTSGuHgnY1mcbEhHExLDS5apGk5OW5rh5RYoU9bsNnrbHLcGOxTs3NxAKj3iQOWojkDG3ZtTMHvH49_SLfUjeusjEswNVodY_7mPnCG2v7sRzTPRVcTuwN-0UL0HTm2kijAsGQ_Uzz-wTg_Hry3UGGPsfAF1RWUlddILQAEpvxMVHnPvIEHenPLuq-IGnV6ykHAz9_g.jMZQMWxDd_Kokb99ikuStfiapCyTK69v_TE3EWjAoSI&dib_tag=se&keywords=portable+document+scanner&qid=1767766300&sprefix=portable+document+scanner%2Caps%2C226&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll1&tag=vegasmultum70-20&linkId=34f48cbb4c558d059d364eb8b276026a&language=en_US&ref_=as_li_ss_tl">HP PS150 Portable Scanner</a></li>
-
-          <li><a class="text-red-400 hover:text-red-300" target="_blank" rel="nofollow noopener"
-            href="https://www.amazon.com/Pockets-Accordion-File-Organizer-TRANBO/dp/B0C497CM14?crid=1QCPORUIU4UW8&dib=eyJ2IjoiMSJ9.fyLHPzkYuut0_xdoEB7eLxcRbvLNbbkyrB_34DcF03mxMZi6lm5ipyX3LEiGIdPLD1yAb29RCjeSiM9ITfw5s__ZFhDFwRCUQxL-ipzG_VBevEerZ_BW79BNqIh5nDcIpGIYCAvVPY0KbO8ZknTlbh5XFTV_AzYIHuuCuwYQMNma2rE2ncZOcLg4KlpJe2x8vzQCt2DlIei9YL-ZTD9NQelk6cmqN2l7m4-1OWlLvNPRUIzs-vWpn1QhYp3BBtTRaKef8PzWkIHoKTTM7phGA712NDQDFFPRNtAHTaubVJY.1Fjzlzmvu3ckr379kE6G62a11eZdmwN8xr2x5A4Us9U&dib_tag=se&keywords=expandable%2Bfile%2Bfolder%2Blegal%2Bsize&qid=1767766352&sprefix=expandable%2Bfile%2Bfolder%2Blegal%2Bsize%2Caps%2C239&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=vegasmultum70-20&linkId=8453da8a1002f56d9ec8190c19305c47&language=en_US&ref_=as_li_ss_tl">TRANBO Expandable File Folder</a></li>
-
-          <li><a class="text-red-400 hover:text-red-300" target="_blank" rel="nofollow noopener"
-            href="https://www.amazon.com/Clever-Fox-Budget-Planner-Notebook/dp/B07VPGYDZJ?crid=J5FN10O3QT0Y&dib=eyJ2IjoiMSJ9.Lq2A_4ryr4tlm0al2_wWMB6DATR830SRQ7Lg3nJJ9X7TBKXY9_ZUSlIs23Vv9-F7JDseWhs37tdRONE_jqFnr4Us_2uK893kbJhIHEv8AUpQK87448sLexvS4mB4AkoGR2pzikXKr1Zxt0JrE-t1O7QIa9kpRRAiz_bkLrW71O9dsy053-qP_KlZPF23Y3ecBEbsfCjBtURG8YH9YC8JjQVIHW-X4VZpNmK8Wsa8o9AMlTi9AXMU2WJdnTb_HZApphqI2Z9SdfCFI1dtOJzWwr8zV4j7YnXyrWYxPOikjkY.su7HamLlMgb4TazSarOd44kXFpyQHFrsNyp1-GnD7UI&dib_tag=se&keywords=undated%2Bbudget%2Bplanner&qid=1767766410&sprefix=undated%2Bbudget%2Bplanner%2Caps%2C254&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=vegasmultum70-20&linkId=11c29f3b1e7e1e2b9dfde5ac24cf98fa&language=en_US&ref_=as_li_ss_tl">Clever Fox Budget Planner</a></li>
-
-          <li><a class="text-red-400 hover:text-red-300" target="_blank" rel="nofollow noopener"
-            href="https://www.amazon.com/Clever-Fox-Income-Expense-Tracker/dp/B08LZMBN3N?crid=1IH02YJV881CI&dib=eyJ2IjoiMSJ9.soISUryP7nVGb9AqOGgiaihZvkZd-NxHeKZ37mVyLHWs-vU3bHFw5o5J3fYzGudFfCrFmU7Cvzzz2vHt9ynftqlp0yOhvoVpREf9H3HBQU5gU_QNgbfnwIVn1zEZBOHMHPToNFtAZkDzfoUL6E03PF369lGBZNJ_5mm5420Za95pfW-qOJ1pVIQvs65eCuhOBjyITRb5lneXIxUTxVHgELdzL0E-lKxk8jgESqIvKYIr7w0_fUE7C6b8bw-KiNmFQzzCl3hpXl0s9GqlBEdx-Q9t3rmlvyK4BVN3JC_5i5Q.AQ3njP8mrPbkLk9VQTMjGaGg9zjIHKLePLR9-03Ss3E&dib_tag=se&keywords=expense%2Btracker%2Bnotebook&qid=1767766478&sprefix=expense%2Btracker%2Bnotebook%2Caps%2C339&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=vegasmultum70-20&linkId=b09cb6025040f334aa10cb2488928384&language=en_US&ref_=as_li_ss_tl">Clever Fox Income & Expense Tracker</a></li>
-        </ol>
+              <p class="mt-3 text-xs text-gray-400">
+                Affiliate link. Price may change on Amazon.
+              </p>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Newsletter (placeholder section so the Subscribe link works) -->
+  <!-- Newsletter (your existing embed kept as-is) -->
   <section id="newsletter" class="px-4 py-12">
     <div class="max-w-6xl mx-auto">
       <div class="bg-black/60 border border-red-900/20 rounded-xl p-6">
@@ -466,7 +711,15 @@
           Get new case drops, archive updates, and fraud patterns. No spam.
         </p>
 
-        <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1770645");</style>
+        <section id="newsletter" class="px-4 py-12 border-t border-red-900/10">
+      <div class="max-w-6xl mx-auto">
+        <div class="bg-gradient-to-br from-red-900/20 to-black border border-red-900/20 rounded-xl p-7 md:p-10">
+          <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Get Case Updates</h2>
+          <p class="text-gray-300 mb-6 max-w-3xl">
+            Short updates when new cases drop — and occasionally a deeper breakdown with sources.
+          </p>
+
+          <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1770645");</style>
     <style type="text/css">
     /* LOADER */
     .ml-form-embedSubmitLoad {
@@ -1348,18 +1601,125 @@
         <script>
             fetch("https://assets.mailerlite.com/jsonp/1927109/forms/171360238780286110/takel")
         </script>
-		
-		<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+
+			<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
 <script>
   kofiWidgetOverlay.draw('badmoneytimes', {
     'type': 'floating-chat',
     'floating-chat.donateButton.text': 'Support me',
-    'floating-chat.donateButton.background-color': '#323842',
-    'floating-chat.donateButton.text-color': '#fff'
+    'floating-chat.donateButton.background-color': '#fcbf47',
+    'floating-chat.donateButton.text-color': '#323842'
   });
 </script>
+		
+		<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support The Investigation!', '#ff0000', 'V7V41U43S1');kofiwidget2.draw();</script> 
+        </div>
+      </div>
+    </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-red-900/20 bg-black/70">
+    <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-gray-400">
+      <p class="text-gray-300 font-semibold">Bad Money Times</p>
+      <p class="mt-2 max-w-3xl">
+        This page is for education and personal protection. It is not legal or financial advice.
+      </p>
+      <p class="mt-3">
+        <span class="font-semibold text-gray-200">Amazon Associate disclosure:</span>
+        As an Amazon Associate I earn from qualifying purchases.
+      </p>
+
+      <div class="mt-6 flex flex-wrap gap-4">
+        <a class="hover:text-white" href="about.html">About</a>
+        <a class="hover:text-white" href="terms.html">Terms</a>
+        <a class="hover:text-white" href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // mobile nav toggle (consistent with other repaired pages)
+    (function () {
+      const btn = document.getElementById("mobileToggle");
+      const nav = document.getElementById("mobileNav");
+      if (!btn || !nav) return;
+
+      const open = () => { nav.classList.remove("hidden"); btn.setAttribute("aria-expanded", "true"); };
+      const close = () => { nav.classList.add("hidden"); btn.setAttribute("aria-expanded", "false"); };
+      const isOpen = () => !nav.classList.contains("hidden");
+
+      btn.addEventListener("click", (e) => { e.preventDefault(); isOpen() ? close() : open(); });
+      nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => close()));
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape" && isOpen()) close(); });
+      document.addEventListener("click", (e) => {
+        if (!isOpen()) return;
+        const t = e.target;
+        if (nav.contains(t) || btn.contains(t)) return;
+        close();
+      });
+    })();
+
+    // Search + category filter
+    (function () {
+      const search = document.getElementById("search");
+      const category = document.getElementById("category");
+      const clear = document.getElementById("clearFilters");
+      const cards = Array.from(document.querySelectorAll(".product-card"));
+
+      function normalize(s){ return (s || "").toLowerCase(); }
+
+      function applyFilters() {
+        const q = normalize(search.value);
+        const cat = category.value;
+
+        cards.forEach(card => {
+          const cardCat = card.getAttribute("data-category");
+          const text = normalize(card.innerText);
+          const matchesQ = !q || text.includes(q);
+          const matchesCat = (cat === "all") || (cardCat === cat);
+
+          card.style.display = (matchesQ && matchesCat) ? "" : "none";
+        });
+      }
+
+      search.addEventListener("input", applyFilters);
+      category.addEventListener("change", applyFilters);
+
+      clear.addEventListener("click", () => {
+        search.value = "";
+        category.value = "all";
+        applyFilters();
+      });
+
+      applyFilters();
+    })();
+
+    // Expand / collapse long descriptions (per-card)
+    (function () {
+      const buttons = document.querySelectorAll(".toggle-desc");
+      buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const card = btn.closest(".product-card");
+          if (!card) return;
+          const block = card.querySelector("[data-fulltext]");
+          if (!block) return;
+
+          const isClamped = block.classList.contains("line-clamp-6");
+          if (isClamped) {
+            block.classList.remove("line-clamp-6");
+            btn.textContent = "Collapse description";
+          } else {
+            block.classList.add("line-clamp-6");
+            btn.textContent = "Expand description";
+            card.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
-
-
-
