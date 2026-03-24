@@ -5,13 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Bad Money Times — Financial True Crime</title>
   <meta name="description" content="Bad Money Times covers scams, fraud, and corruption — focusing on authority figures who steal money meant for vulnerable people." />
-
-  <!-- Tailwind CDN (fine for Phase 1) -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Your global styles -->
   <link rel="stylesheet" href="styles.css" />
-
   <style>
     .logo-img { width: 56px; height: auto; }
     .shorts-frame {
@@ -20,10 +15,11 @@
       max-width: 420px;
       aspect-ratio: 9 / 16;
       margin: 0 auto;
-      border-radius: 16px;
+      border-radius: 24px;
       overflow: hidden;
       border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(0,0,0,0.35);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      box-shadow: 0 24px 80px rgba(0,0,0,0.55);
     }
     .shorts-frame iframe {
       position: absolute;
@@ -33,8 +29,6 @@
       border: 0;
     }
   </style>
-
-  <!-- MailerLite Universal -->
   <script>
     (function (w, d, e, u, f, l, n) {
       w[f] = w[f] || function () { (w[f].q = w[f].q || []).push(arguments); };
@@ -48,8 +42,7 @@
 <body class="bg-black text-white antialiased">
   <a id="top"></a>
 
-  <!-- ===== HEADER ===== -->
-  <header class="fixed w-full z-50 bg-black/95 backdrop-blur-sm border-b border-red-900/30">
+  <header class="fixed w-full z-50 bg-black/90 backdrop-blur-xl border-b border-red-900/30">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
         <img src="assets/badmoneytimes-1.jpg" alt="Bad Money Times logo" class="logo-img rounded-md object-contain" />
@@ -61,16 +54,15 @@
 
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="index.html" class="hover:text-red-500 transition">Home</a>
-		  <a href="episodes.html" class="hover:text-red-500 transition">Episodes</a>
+        <a href="episodes.html" class="hover:text-red-500 transition">Episodes</a>
         <a href="cases/index.html" class="hover:text-red-500 transition">Cases</a>
         <a href="archive.html" class="hover:text-red-500 transition">Archive</a>
         <a href="articles.html" class="hover:text-red-500 transition">Articles</a>
         <a href="resources.html" class="hover:text-red-500 transition">Resources</a>
-		  <a href="about.html" class="hover:text-red-500 transition">About</a>
+        <a href="about.html" class="hover:text-red-500 transition">About</a>
         <a href="#newsletter" class="bg-red-600 hover:bg-red-700 px-3 py-2 rounded text-sm font-semibold transition">Subscribe</a>
       </nav>
 
-      <!-- Mobile toggle -->
       <div class="md:hidden">
         <button id="mobileToggle" aria-expanded="false" aria-controls="mobileNav" class="p-2 rounded hover:bg-white/5">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-white">
@@ -80,69 +72,65 @@
       </div>
     </div>
 
-    <!-- Mobile nav -->
     <div id="mobileNav" class="md:hidden hidden px-4 pb-4 border-t border-red-900/10">
       <a href="index.html" class="block py-2">Home</a>
-		<a href="episodes.html" class="block py-2">Episodes</a>
+      <a href="episodes.html" class="block py-2">Episodes</a>
       <a href="cases/index.html" class="block py-2">Cases</a>
       <a href="archive.html" class="block py-2">Archive</a>
       <a href="articles.html" class="block py-2">Articles</a>
       <a href="resources.html" class="block py-2">Resources</a>
-		<a href="about.html" class="block py-2">About</a>
+      <a href="about.html" class="block py-2">About</a>
       <a href="#newsletter" class="block py-2">Subscribe</a>
     </div>
   </header>
 
-  <main class="pt-28 pb-16">
-
-    <!-- ===== HERO ===== -->
-    <section class="px-4 py-10">
-      <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+  <main class="pt-24 pb-16 homepage-shell">
+    <section class="px-4 pt-10 pb-8 hero-surface">
+      <div class="max-w-6xl mx-auto grid lg:grid-cols-[1.05fr_.95fr] gap-10 items-center">
         <div>
-          <div class="inline-flex items-center gap-2 bg-red-600/20 border border-red-600/40 px-4 py-2 rounded-full mb-5">
+          <div class="inline-flex items-center gap-2 bg-red-600/15 border border-red-600/30 px-4 py-2 rounded-full mb-5 shadow-[0_0_30px_rgba(220,38,38,.12)]">
             <div class="w-2 h-2 bg-red-500 rounded-full"></div>
-            <span class="text-sm font-semibold">FINANCIAL TRUE CRIME</span>
+            <span class="text-sm font-semibold tracking-wide">FOLLOW THE MONEY</span>
           </div>
 
-          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-            Authority figures stealing money meant for vulnerable people.
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.02] max-w-3xl">
+            They stole it. <span class="text-white/90">This is where it went.</span>
           </h1>
 
-          <p class="text-gray-300 text-lg mt-5 max-w-xl leading-relaxed">
-            Scams, fraud, and corruption — focusing on authority figures who steal money meant for vulnerable people.
-            Neutral tone, checkable facts, and a clean case-by-case archive.
+          <p class="text-gray-300 text-lg mt-5 max-w-2xl leading-relaxed">
+            Real cases. Court documents. Clear breakdowns of how public money, aid money, and trust get turned into theft machines.
           </p>
 
           <div class="mt-7 flex flex-col sm:flex-row gap-3">
-            <a href="episodes.html" class="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg font-semibold transition">
-              Watch Latest
+            <a href="episodes.html" class="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg font-semibold transition shadow-[0_12px_30px_rgba(220,38,38,.25)]">
+              Watch the Latest Case
             </a>
             <a href="cases/index.html" class="inline-flex items-center justify-center border border-red-600/40 hover:border-red-600/80 px-6 py-3 rounded-lg font-semibold transition">
-              Browse All Cases →
+              See Where the Money Went
             </a>
-            <a href="resources.html" class="inline-flex items-center justify-center border border-white/30 hover:border-white/60 px-6 py-3 rounded-lg font-semibold transition">
-              Resources
+            <a href="#newsletter" class="inline-flex items-center justify-center border border-white/20 hover:border-white/50 px-6 py-3 rounded-lg font-semibold transition">
+              Get New Cases First
             </a>
           </div>
 
           <div class="mt-8 grid sm:grid-cols-3 gap-4">
-            <div class="bg-black/50 border border-red-900/20 rounded-lg p-4">
+            <div class="glass-card p-4 rounded-2xl card-pop">
               <div class="text-sm font-bold mb-1">Fast breakdowns</div>
-              <p class="text-sm text-gray-400">Shorts built on one repeatable mechanism.</p>
+              <p class="text-sm text-gray-400">Short-form case files built for clarity, retention, and proof.</p>
             </div>
-            <div class="bg-black/50 border border-red-900/20 rounded-lg p-4">
-              <div class="text-sm font-bold mb-1">Case pages</div>
-              <p class="text-sm text-gray-400">Each case gets its own file with sources.</p>
+            <div class="glass-card p-4 rounded-2xl card-pop">
+              <div class="text-sm font-bold mb-1">Source-backed case pages</div>
+              <p class="text-sm text-gray-400">Every major case leads into its own archive with documents and links.</p>
             </div>
-            <div class="bg-black/50 border border-red-900/20 rounded-lg p-4">
+            <div class="glass-card p-4 rounded-2xl card-pop">
               <div class="text-sm font-bold mb-1">Protection tools</div>
-              <p class="text-sm text-gray-400">Practical resources to reduce risk.</p>
+              <p class="text-sm text-gray-400">Practical picks for protecting documents, money habits, and personal records.</p>
             </div>
           </div>
         </div>
-          
 
-          <!-- EDIT HERE: Replace VIDEO_ID in BOTH places -->
+        <div class="hero-video-wrap">
+          <div class="text-sm uppercase tracking-[0.22em] text-red-300/85 font-semibold mb-4">Start here</div>
           <div class="shorts-frame" data-short-id="Ieum1ZAy9KI">
             <iframe
               src="https://youtube.com/embed/Ieum1ZAy9KI"
@@ -153,49 +141,82 @@
               allowfullscreen>
             </iframe>
           </div>
-
-          <div class="mt-4 text-xs text-gray-500">
-            
-          </div>
+          <p class="mt-4 text-sm text-gray-400 max-w-md">
+            One case. One mechanism. One clean explanation of how authority gets abused and who gets hurt.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- ===== QUICK PATHS ===== -->
+    <section class="px-4 py-8 border-t border-red-900/10">
+      <div class="max-w-6xl mx-auto grid lg:grid-cols-3 gap-4">
+        <a href="episodes.html" class="action-band action-band--red rounded-2xl p-6 card-pop block">
+          <div class="text-xs uppercase tracking-[0.2em] text-red-300/70 mb-2">Watch</div>
+          <h2 class="text-2xl font-extrabold mb-2">Start with the latest breakdown</h2>
+          <p class="text-sm text-gray-300">Drop into the newest case immediately instead of browsing cold.</p>
+        </a>
+        <a href="#newsletter" class="action-band rounded-2xl p-6 card-pop block">
+          <div class="text-xs uppercase tracking-[0.2em] text-red-300/70 mb-2">Get access</div>
+          <h2 class="text-2xl font-extrabold mb-2">Get new cases before they go public</h2>
+          <p class="text-sm text-gray-300">Join the list and see new drops before they disappear into the feed.</p>
+        </a>
+        <a href="resources.html" class="action-band rounded-2xl p-6 card-pop block">
+          <div class="text-xs uppercase tracking-[0.2em] text-red-300/70 mb-2">Protect yourself</div>
+          <h2 class="text-2xl font-extrabold mb-2">Use tools that reduce exposure</h2>
+          <p class="text-sm text-gray-300">Document storage, backups, and money control tools tied directly to the mission.</p>
+        </a>
+      </div>
+    </section>
+
     <section class="px-4 py-10 border-t border-red-900/10">
       <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
-        <a href="cases/index.html" class="block bg-black/50 border border-red-900/15 rounded-xl p-6 hover:border-red-600/40 transition">
-          <div class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded inline-block mb-3">START HERE</div>
+        <a href="cases/index.html" class="block glass-card rounded-2xl p-6 hover:border-red-600/40 transition card-pop">
+          <div class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded inline-block mb-3">START INVESTIGATING</div>
           <h2 class="text-2xl font-extrabold mb-2">Cases</h2>
-          <p class="text-sm text-gray-400">Breakdowns & Sources of each case file</p>
+          <p class="text-sm text-gray-400">Breakdowns and sources for each case file.</p>
           <div class="text-sm text-red-400 font-semibold mt-4">Open Cases →</div>
         </a>
 
-        <a href="archive.html" class="block bg-black/50 border border-red-900/15 rounded-xl p-6 hover:border-red-600/40 transition">
-          <div class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded inline-block mb-3">BINGE MODE</div>
+        <a href="archive.html" class="block glass-card rounded-2xl p-6 hover:border-red-600/40 transition card-pop">
+          <div class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded inline-block mb-3">SEE EVERY CASE</div>
           <h2 class="text-2xl font-extrabold mb-2">Archive</h2>
-          <p class="text-sm text-gray-400">Search + filter the Shorts library by theme.</p>
+          <p class="text-sm text-gray-400">Search and filter the Shorts library by theme.</p>
           <div class="text-sm text-red-400 font-semibold mt-4">Open Archive →</div>
         </a>
 
-        <a href="resources.html" class="block bg-black/50 border border-red-900/15 rounded-xl p-6 hover:border-red-600/40 transition">
-          <div class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded inline-block mb-3">TOOLS</div>
+        <a href="resources.html" class="block glass-card rounded-2xl p-6 hover:border-red-600/40 transition card-pop">
+          <div class="text-xs font-bold bg-red-600/20 text-red-300 px-2 py-1 rounded inline-block mb-3">PROTECT YOURSELF</div>
           <h2 class="text-2xl font-extrabold mb-2">Resources</h2>
-          <p class="text-sm text-gray-400">Protection tools + reporting links + affiliate picks.</p>
+          <p class="text-sm text-gray-400">Reporting links, document storage, and money discipline tools.</p>
           <div class="text-sm text-red-400 font-semibold mt-4">Open Resources →</div>
         </a>
       </div>
     </section>
 
-    <!-- ===== NEWSLETTER ===== -->
-    <aside id="newsletter" class="px-4 py-12 border-t border-red-900/10">
-      <div class="max-w-6xl mx-auto">
-        <div class="bg-gradient-to-br from-red-900/20 to-black border border-red-900/20 rounded-xl p-7 md:p-10">
-          <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Get Case Updates</h2>
-          <p class="text-gray-300 mb-6 max-w-3xl">
-            Short updates when new cases drop — and occasionally a deeper breakdown with sources.
+    <section class="px-4 py-10 border-t border-red-900/10">
+      <div class="max-w-6xl mx-auto grid lg:grid-cols-[.92fr_1.08fr] gap-8 items-start">
+        <div class="glass-card rounded-3xl p-7 md:p-8 card-pop sticky-support">
+          <div class="inline-flex items-center gap-2 bg-amber-400/15 border border-amber-300/20 text-amber-200 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+            Viewer support
+          </div>
+          <h2 class="text-3xl md:text-4xl font-extrabold leading-tight mb-4">This project runs on viewer support.</h2>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            Every case takes time, documents, and research. If you want more cases like this exposed, support is what keeps it going.
           </p>
+          <p class="text-sm text-gray-400 mb-6">
+            You do not need to figure out what the button says. The page around it does the selling.
+          </p>
+          <div id="kofi-inline-slot" class="min-h-[74px]"></div>
+        </div>
 
+        <aside id="newsletter" class="newsletter-shell rounded-3xl p-7 md:p-9">
+          <div class="max-w-3xl">
+            <div class="text-xs uppercase tracking-[0.22em] text-red-300/70 font-semibold mb-3">Newsletter</div>
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-3">Get new cases before they go public</h2>
+            <p class="text-gray-300 mb-6 max-w-2xl">
+              Short updates when new cases drop — and occasional deeper breakdowns with sources. Be first in, not late to the feed.
+            </p>
+          </div>
           <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1770645");</style>
     <style type="text/css">
     /* LOADER */
@@ -1090,80 +1111,64 @@
 </script>
 		
 		<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support The Investigation!', '#ff0000', 'V7V41U43S1');kofiwidget2.draw();</script> 
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support The Investigation!', '#ff0000', 'V7V41U43S1');kofiwidget2.draw();</script>
+        </aside>
+      </div>
+    </section>
+
+    <section id="top-picks" class="px-4 py-10 border-t border-red-900/10">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-6">
+          <div>
+            <div class="text-xs uppercase tracking-[0.22em] text-red-300/70 font-semibold mb-2">Affiliate picks</div>
+            <h2 class="text-3xl font-extrabold text-white">Protect yourself from this</h2>
+            <p class="mt-2 text-gray-300 max-w-3xl">
+              These are practical tools to track money, protect records, and reduce the chance that chaos wins. Some links are affiliate links. As an Amazon Associate, I earn from qualifying purchases.
+            </p>
+          </div>
+          <a href="resources.html" class="inline-flex text-sm font-semibold text-red-400 hover:text-red-300">Browse all categories →</a>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-4">
+          <a href="resources.html#prod-4" class="group glass-card rounded-2xl p-4 transition card-pop">
+            <div class="flex items-center gap-3">
+              <img src="assets/resources/prod_4.jpg" alt="Fireproof Document Bags" class="w-16 h-16 rounded-xl object-cover border border-white/10" />
+              <div>
+                <div class="text-xs text-gray-400">Document protection</div>
+                <div class="font-bold text-white group-hover:text-red-300 transition">Fireproof document bags</div>
+              </div>
+            </div>
+            <div class="mt-3 text-sm text-gray-300">Built for real emergencies. Fireproof and waterproof storage for papers that matter.</div>
+          </a>
+
+          <a href="resources.html#prod-5" class="group glass-card rounded-2xl p-4 transition card-pop">
+            <div class="flex items-center gap-3">
+              <img src="assets/resources/prod_5.jpg" alt="USB flash drives" class="w-16 h-16 rounded-xl object-cover border border-white/10" />
+              <div>
+                <div class="text-xs text-gray-400">Backups</div>
+                <div class="font-bold text-white group-hover:text-red-300 transition">USB backup drives</div>
+              </div>
+            </div>
+            <div class="mt-3 text-sm text-gray-300">Cheap redundancy. Keep copies of scans, receipts, IDs, and case paperwork.</div>
+          </a>
+
+          <a href="resources.html#prod-7" class="group glass-card rounded-2xl p-4 transition card-pop">
+            <div class="flex items-center gap-3">
+              <img src="assets/resources/prod_7.jpg" alt="Budget planner" class="w-16 h-16 rounded-xl object-cover border border-white/10" />
+              <div>
+                <div class="text-xs text-gray-400">Money discipline</div>
+                <div class="font-bold text-white group-hover:text-red-300 transition">Budget planner</div>
+              </div>
+            </div>
+            <div class="mt-3 text-sm text-gray-300">Visibility beats vibes. Track spending, debt, bills, and savings in one place.</div>
+          </a>
         </div>
       </div>
-    </aside>
-	  
-    <!-- Top Picks -->
-  <section id="top-picks" class="px-4 py-8">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex items-end justify-between gap-4">
-        <div>
-          <li class="flex gap-2"><span class="text-red-400">•</span> Affiliate disclosure: Some links are affiliate links. As an Amazon Associate I earn from qualifying purchases.</li>
-			<h2 class="text-2xl font-extrabold text-white">My Amazon Top picks!</h2>
-          <p class="mt-2 text-gray-300 max-w-3xl">
-            These are the fastest “impact per dollar” items for most people: reduce exposure + protect records + track money.
-          </p>
-        </div>
-        <a href="#education" class="hidden md:inline-flex text-sm font-semibold text-red-400 hover:text-red-300">
-          Browse all categories →
-        </a>
-      </div>
+    </section>
 
-      <div class="mt-6 grid md:grid-cols-3 gap-4">
-        <!-- Pick 1 -->
-        <a href="#prod-4" class="group bg-black/60 border border-red-900/20 rounded-2xl p-4 hover:border-red-600/40 transition">
-          <div class="flex items-center gap-3">
-            <img src="assets/resources/prod_4.jpg" alt="Fireproof Document Bags" class="w-16 h-16 rounded-xl object-cover border border-white/10" />
-            <div>
-              <div class="text-xs text-gray-400">Document protection</div>
-              <div class="font-bold text-white group-hover:text-red-300 transition">Fireproof Document Bags (4 Pack)</div>
-            </div>
-          </div>
-          <div class="mt-3 text-sm text-gray-300 line-clamp-3">
-            Built for real emergencies. Fireproof + waterproof. High-viz strip for fast evacuation.
-          </div>
-        </a>
-
-        <!-- Pick 2 -->
-        <a href="#prod-5" class="group bg-black/60 border border-red-900/20 rounded-2xl p-4 hover:border-red-600/40 transition">
-          <div class="flex items-center gap-3">
-            <img src="assets/resources/prod_5.jpg" alt="Kepmem Flash Drives" class="w-16 h-16 rounded-xl object-cover border borderwhite/10 border border-white/10" />
-            <div>
-              <div class="text-xs text-gray-400">Backups</div>
-              <div class="font-bold text-white group-hover:text-red-300 transition">Kepmem Flash Drive 64GB (10-pack)</div>
-            </div>
-          </div>
-          <div class="mt-3 text-sm text-gray-300 line-clamp-3">
-            Cheap redundancy. Keep copies of scans, receipts, and case paperwork.
-          </div>
-        </a>
-
-        <!-- Pick 3 -->
-        <a href="#prod-7" class="group bg-black/60 border border-red-900/20 rounded-2xl p-4 hover:border-red-600/40 transition">
-          <div class="flex items-center gap-3">
-            <img src="assets/resources/prod_7.jpg" alt="Clever Fox Budget Planner" class="w-16 h-16 rounded-xl object-cover border border-white/10" />
-            <div>
-              <div class="text-xs text-gray-400">Money discipline</div>
-              <div class="font-bold text-white group-hover:text-red-300 transition">Clever Fox Budget Planner (A5)</div>
-            </div>
-          </div>
-          <div class="mt-3 text-sm text-gray-300 line-clamp-3">
-            Visibility beats vibes. Track spending, debt, savings, and bills in one system.
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-
-    <!-- ===== FOOTER ===== -->
     <footer class="px-4 py-10">
       <div class="max-w-6xl mx-auto border-t border-red-900/10 pt-6 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
-        <div class="text-sm text-gray-400">
-          © <span id="year"></span> Bad Money Times. All rights reserved.
-        </div>
+        <div class="text-sm text-gray-400">© <span id="year"></span> Bad Money Times. All rights reserved.</div>
         <div class="flex gap-4 text-sm">
           <a class="hover:text-red-500" href="about.html">About</a>
           <a class="hover:text-red-500" href="privacy.html">Privacy</a>
@@ -1171,72 +1176,36 @@
         </div>
       </div>
     </footer>
-
   </main>
 
   <script>
-  // footer year
-  document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
+    (function () {
+      const btn = document.getElementById("mobileToggle");
+      const nav = document.getElementById("mobileNav");
+      if (!btn || !nav) return;
+      const open = () => { nav.classList.remove("hidden"); btn.setAttribute("aria-expanded", "true"); };
+      const close = () => { nav.classList.add("hidden"); btn.setAttribute("aria-expanded", "false"); };
+      const isOpen = () => !nav.classList.contains("hidden");
+      btn.addEventListener("click", (e) => { e.preventDefault(); isOpen() ? close() : open(); });
+      nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => close()));
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape" && isOpen()) close(); });
+      document.addEventListener("click", (e) => {
+        if (!isOpen()) return;
+        const t = e.target;
+        if (nav.contains(t) || btn.contains(t)) return;
+        close();
+      });
+    })();
 
-  // mobile nav toggle (upgraded)
-  (function () {
-    const btn = document.getElementById("mobileToggle");
-    const nav = document.getElementById("mobileNav");
-    if (!btn || !nav) return;
-
-    const open = () => {
-      nav.classList.remove("hidden");
-      btn.setAttribute("aria-expanded", "true");
-    };
-
-    const close = () => {
-      nav.classList.add("hidden");
-      btn.setAttribute("aria-expanded", "false");
-    };
-
-    const isOpen = () => !nav.classList.contains("hidden");
-
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      isOpen() ? close() : open();
+    window.addEventListener('load', function () {
+      const inline = document.getElementById('kofi-widget-2');
+      const slot = document.getElementById('kofi-inline-slot');
+      if (inline && slot && !slot.contains(inline)) {
+        slot.appendChild(inline);
+      }
     });
-
-    // Close when a nav link is clicked
-    nav.querySelectorAll("a").forEach((a) => {
-      a.addEventListener("click", () => close());
-    });
-
-    // Close on Escape
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && isOpen()) close();
-    });
-
-    // Close when tapping/clicking outside the menu + button
-    document.addEventListener("click", (e) => {
-      if (!isOpen()) return;
-      const t = e.target;
-      if (nav.contains(t) || btn.contains(t)) return;
-      close();
-    });
-  })();
-</script>
-
-
+  </script>
   <script src="main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
